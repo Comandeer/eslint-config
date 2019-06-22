@@ -58,7 +58,7 @@
     "chai": "^4.1.2",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^5.0.0",
+    "eslint": "^6.0.0",
     "husky": "^2.3.0",
     "mocha": "^6.0.0"
   }
