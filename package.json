@@ -54,7 +54,7 @@
     "eslint": ">=4.0.0"
   },
   "devDependencies": {
-    "@comandeer/is-ci": "^1.0.0",
+    "@comandeer/is-ci": "^2.0.0",
     "chai": "^4.1.2",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^2.1.0",
