@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.0.0]
+## [0.2.0] – 2019-06-28
 ### Added
-* [#1] Add official support for Node 10.
+* [#1] Official support for Node 10.
+* [#12] Official support for Windows and macOS.
 
 ## 0.1.0 – 2018-04-14
 ### Added
@@ -16,4 +17,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [#1]: https://github.com/Comandeer/eslint-config/issues/1
 
-[1.0.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.1.0...v1.0.0
+[0.2.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.1.0...v0.2.0
