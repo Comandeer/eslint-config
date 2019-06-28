@@ -130,7 +130,9 @@ module.exports = {
 		'new-cap': 'error',
 		'new-parens': 'error',
 		'no-lonely-if': 'error',
-		'no-use-before-define': 'error',
+		'no-use-before-define': [ 'error', {
+			functions: false
+		} ],
 		'no-with': 'error',
 		'eqeqeq': [ 'error', 'smart' ],
 		'getter-return': [ 'error', {
