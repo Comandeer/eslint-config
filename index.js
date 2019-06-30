@@ -137,7 +137,11 @@ module.exports = {
 		'require-await': 'error',
 		'require-yield': 'error',
 		semi: [ 'error', 'always' ],
-		'space-before-function-paren': [ 'error', 'never' ],
+		'space-before-function-paren': [ 'error', {
+			anonymous: 'never',
+			named: 'never',
+			asyncArrow: 'always'
+		} ],
 		'space-in-parens': [ 'error', 'always' ],
 		'space-infix-ops': 'error',
 		'space-unary-ops': 'error',

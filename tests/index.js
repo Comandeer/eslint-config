@@ -21,4 +21,13 @@ describe( 'eslint-config', () => {
 
 		expect( errors ).to.have.lengthOf( 0 );
 	} );
+
+	// #21
+	it( 'allows space after async keyword in arrow functions', () => {
+		const cli = new CLIEngine( config );
+		const report = cli.executeOnFiles( [ `${ __dirname }/fixtures/asyncArrow.js` ] );
+		const errors = CLIEngine.getErrorResults( report.results );
+
+		expect( errors ).to.have.lengthOf( 0 );
+	} );
 } );
