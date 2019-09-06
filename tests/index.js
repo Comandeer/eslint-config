@@ -30,4 +30,19 @@ describe( 'eslint-config', () => {
 
 		expect( errors ).to.have.lengthOf( 0 );
 	} );
+
+	// #23
+	it( 'disallows console usage', () => {
+		const cliConfig = Object.assign( {}, config, {
+			envs: [
+				'browser'
+			]
+		} );
+		const cli = new CLIEngine( cliConfig );
+		const report = cli.executeOnFiles( [ `${ __dirname }/fixtures/console.js` ] );
+		const errors = CLIEngine.getErrorResults( report.results );
+
+		expect( errors ).to.have.lengthOf( 1 );
+		expect( errors[ 0 ].messages ).to.have.lengthOf( 4 );
+	} );
 } );
