@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.2.2] – 2019-09-07
+### Fixed
+* [#23] Missing restrictions on `console` usage.
+
 ## [0.2.1] – 2019-06-30
 ### Fixed
 * [#21] Allow space after `async` keyword in arrow functions.
@@ -37,6 +41,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#17]: https://github.com/Comandeer/eslint-config/issues/17
 [#18]: https://github.com/Comandeer/eslint-config/issues/18
 [#21]: https://github.com/Comandeer/eslint-config/issues/21
+[#23]: https://github.com/Comandeer/eslint-config/issues/23
 
+[0.2.2]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.1.0...v0.2.0
