@@ -9,36 +9,39 @@ const expect = chai.expect; // eslint-disable-line no-unused-vars
 describe( 'eslint-config', () => {
 	const fixturesPath = resolvePath( __dirname, 'fixtures' );
 
-	it( 'fails on incorrect code', async () => {
-		const fixturePath = resolvePath( fixturesPath, 'invalid.js' );
-		const [ results ] = await lintFile( fixturePath, defaultConfig );
+	it( 'failse on incorrect code', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'invalid.js' ),
+		errorCount: 1
+	} ) );
 
-		expect( results.errorCount ).to.equal( 1 );
-	} );
-
-	it( 'passes on correct code', async () => {
-		const fixturePath = resolvePath( fixturesPath, 'valid.js' );
-		const [ results ] = await lintFile( fixturePath, defaultConfig );
-
-		expect( results.errorCount ).to.equal( 0 );
-	} );
+	it( 'passes on correct code', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'valid.js' )
+	} ) );
 
 	// #21
-	it( 'allows space after async keyword in arrow functions', async () => {
-		const fixturePath = resolvePath( fixturesPath, 'asyncArrow.js' );
-		const [ results ] = await lintFile( fixturePath, defaultConfig );
-
-		expect( results.errorCount ).to.equal( 0 );
-	} );
+	it( 'allows space after async keyword in arrow functions', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'asyncArrow.js' )
+	} ) );
 
 	// #23
-	it( 'disallows console usage', async () => {
-		const fixturePath = resolvePath( fixturesPath, 'console.js' );
-		const [ results ] = await lintFile( fixturePath, defaultConfig );
-
-		expect( results.errorCount ).to.equal( 4 );
-	} );
+	it( 'disallows console usage', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'console.js' ),
+		errorCount: 4
+	} ) );
 } );
+
+function createTest( {
+	fixturePath,
+	config = defaultConfig,
+	fakePath = fixturePath,
+	errorCount = 0
+} = {} ) {
+	return async () => {
+		const [ results ] = await lintFile( fixturePath, config, fakePath );
+
+		expect( results.errorCount ).to.equal( errorCount );
+	};
+}
 
 async function lintFile( path, config, fakePath = path ) {
 	const code = await readFile( path, 'utf8' );
