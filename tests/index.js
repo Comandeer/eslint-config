@@ -1,48 +1,54 @@
-const { CLIEngine } = require( 'eslint' );
+const { readFile } = require( 'fs' ).promises;
+const { resolve: resolvePath } = require( 'path' );
+const { ESLint } = require( 'eslint' );
 const chai = require( 'chai' );
-const config = require( '../index' );
+const defaultConfig = require( '../index' );
 
 const expect = chai.expect; // eslint-disable-line no-unused-vars
 
 describe( 'eslint-config', () => {
-	it( 'fails on incorrect code', () => {
-		const cli = new CLIEngine( config );
-		const report = cli.executeOnFiles( [ `${ __dirname }/fixtures/invalid.js` ] );
-		const errors = CLIEngine.getErrorResults( report.results );
+	const fixturesPath = resolvePath( __dirname, 'fixtures' );
 
-		expect( errors ).to.have.lengthOf( 1 );
-		expect( errors[ 0 ] ).to.include.keys( 'errorCount' );
+	it( 'fails on incorrect code', async () => {
+		const fixturePath = resolvePath( fixturesPath, 'invalid.js' );
+		const [ results ] = await lintFile( fixturePath, defaultConfig );
+
+		expect( results.errorCount ).to.equal( 1 );
 	} );
 
-	it( 'passes on correct code', () => {
-		const cli = new CLIEngine( config );
-		const report = cli.executeOnFiles( [ `${ __dirname }/fixtures/valid.js` ] );
-		const errors = CLIEngine.getErrorResults( report.results );
+	it( 'passes on correct code', async () => {
+		const fixturePath = resolvePath( fixturesPath, 'valid.js' );
+		const [ results ] = await lintFile( fixturePath, defaultConfig );
 
-		expect( errors ).to.have.lengthOf( 0 );
+		expect( results.errorCount ).to.equal( 0 );
 	} );
 
 	// #21
-	it( 'allows space after async keyword in arrow functions', () => {
-		const cli = new CLIEngine( config );
-		const report = cli.executeOnFiles( [ `${ __dirname }/fixtures/asyncArrow.js` ] );
-		const errors = CLIEngine.getErrorResults( report.results );
+	it( 'allows space after async keyword in arrow functions', async () => {
+		const fixturePath = resolvePath( fixturesPath, 'asyncArrow.js' );
+		const [ results ] = await lintFile( fixturePath, defaultConfig );
 
-		expect( errors ).to.have.lengthOf( 0 );
+		expect( results.errorCount ).to.equal( 0 );
 	} );
 
 	// #23
-	it( 'disallows console usage', () => {
-		const cliConfig = Object.assign( {}, config, {
-			envs: [
-				'browser'
-			]
-		} );
-		const cli = new CLIEngine( cliConfig );
-		const report = cli.executeOnFiles( [ `${ __dirname }/fixtures/console.js` ] );
-		const errors = CLIEngine.getErrorResults( report.results );
+	it( 'disallows console usage', async () => {
+		const fixturePath = resolvePath( fixturesPath, 'console.js' );
+		const [ results ] = await lintFile( fixturePath, defaultConfig );
 
-		expect( errors ).to.have.lengthOf( 1 );
-		expect( errors[ 0 ].messages ).to.have.lengthOf( 4 );
+		expect( results.errorCount ).to.equal( 4 );
 	} );
 } );
+
+async function lintFile( path, config, fakePath = path ) {
+	const code = await readFile( path, 'utf8' );
+	const eslint = new ESLint( {
+		useEslintrc: false,
+		baseConfig: config
+	} );
+	const report = await eslint.lintText( code, {
+		filePath: fakePath
+	} );
+
+	return report;
+}
