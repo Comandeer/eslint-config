@@ -1,6 +1,6 @@
 {
   "name": "@comandeer/eslint-config",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Shareable ESLint configuration",
   "main": "index.js",
   "scripts": {
