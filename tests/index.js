@@ -28,6 +28,20 @@ describe( 'eslint-config', () => {
 		fixturePath: resolvePath( fixturesPath, 'console.js' ),
 		errorCount: 4
 	} ) );
+
+	// #32
+	it.only( 'disallows test environment globals in source files', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
+		fakePath: 'src/myTests.js',
+		errorCount: 5
+	} ) );
+
+	// #32
+	it( 'allows test environment globals in test files', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
+		fakePath: 'tests/myTests.js',
+		errorCount: 0
+	} ) );
 } );
 
 function createTest( {
