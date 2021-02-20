@@ -3,8 +3,7 @@ module.exports = {
 		browser: true,
 		commonjs: true,
 		es6: true,
-		node: true,
-		mocha: true
+		node: true
 	},
 	parserOptions: {
 		sourceType: 'module',
@@ -13,6 +12,24 @@ module.exports = {
 			impliedStrict: true
 		}
 	},
+
+	overrides: [
+		{
+			files: [ 'tests/**/*.js' ],
+			env: {
+				browser: true,
+				commonjs: true,
+				es6: true,
+				node: true,
+				mocha: true
+			},
+			globals: {
+				expect: 'readonly',
+				sinon: 'readonly',
+				proxyquire: 'readonly'
+			}
+		}
+	],
 	rules: {
 		'array-bracket-spacing': [ 'error', 'always' ],
 		'array-callback-return': 'error',
