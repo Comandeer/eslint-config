@@ -55,12 +55,10 @@
     "eslint": ">=6.0.1"
   },
   "devDependencies": {
-    "@comandeer/is-ci": "^3.0.0",
-    "chai": "^4.3.4",
+    "@comandeer/mocha-lib-tester": "^0.3.0",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.26.0",
-    "husky": "^6.0.0",
-    "mocha": "^8.4.0"
+    "husky": "^6.0.0"
   }
 }
