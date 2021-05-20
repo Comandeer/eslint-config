@@ -58,5 +58,8 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.26.0",
     "husky": "^6.0.0"
+  },
+  "dependencies": {
+    "eslint-plugin-mocha": "^8.1.0"
   }
 }

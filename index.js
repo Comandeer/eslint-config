@@ -1,4 +1,7 @@
 module.exports = {
+	plugins: [
+		'mocha'
+	],
 	env: {
 		browser: true,
 		commonjs: true,
@@ -16,6 +19,7 @@ module.exports = {
 	overrides: [
 		{
 			files: [ 'tests/**/*.js' ],
+			excludedFiles: [ 'tests/fixtures/**/*.js' ],
 			env: {
 				browser: true,
 				commonjs: true,
@@ -27,6 +31,21 @@ module.exports = {
 				expect: 'readonly',
 				sinon: 'readonly',
 				proxyquire: 'readonly'
+			},
+			rules: {
+				'mocha/handle-done-callback': 'error',
+				'mocha/max-top-level-suites': [ 'error', { limit: 1 } ],
+				'mocha/no-async-describe': 'error',
+				'mocha/no-exclusive-tests': 'error',
+				'mocha/no-exports': 'error',
+				'mocha/no-global-tests': 'error',
+				'mocha/no-identical-title': 'error',
+				'mocha/no-nested-tests': 'error',
+				'mocha/no-pending-tests': 'error',
+				'mocha/no-return-and-callback': 'error',
+				'mocha/no-sibling-hooks': 'error',
+				'mocha/no-skipped-tests': 'error',
+				'mocha/no-top-level-hooks': 'error'
 			}
 		}
 	],
