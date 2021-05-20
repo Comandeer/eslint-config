@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ---
 
 ## [0.4.0]
+### Changed
+* [#38] Set ESLint env to ES2021.
+
 ### Fixed
-* [#57] `require-await` and `require-yield` rules can change the behavior of the code.
+* [#37] `require-await` and `require-yield` rules can change the behavior of the code.
 
 ## [0.3.0] – 2021-02-20
 ### Added
@@ -51,7 +54,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#21]: https://github.com/Comandeer/eslint-config/issues/21
 [#23]: https://github.com/Comandeer/eslint-config/issues/23
 [#32]: https://github.com/Comandeer/eslint-config/issues/32
+[#37]: https://github.com/Comandeer/eslint-config/issues/37
+[#38]: https://github.com/Comandeer/eslint-config/issues/38
 
+[0.4.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.2...v0.3.0
 [0.2.2]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.0...v0.2.1
