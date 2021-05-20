@@ -51,6 +51,12 @@ describe( 'eslint-config', () => {
 		fixturePath: resolvePath( fixturesPath, 'generatorNoYield.js' ),
 		errorCount: 0
 	} ) );
+
+	// #38
+	it( 'parses ES2021 code', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'es2021.js' ),
+		errorCount: 0
+	} ) );
 } );
 
 function createTest( {
