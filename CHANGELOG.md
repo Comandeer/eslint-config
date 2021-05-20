@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.4.0]
+### Fixed
+* [#57] `require-await` and `require-yield` rules can change the behavior of the code.
+
 ## [0.3.0] – 2021-02-20
 ### Added
 * [#32] Support for separate testing environment.

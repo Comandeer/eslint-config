@@ -152,8 +152,6 @@ module.exports = {
 		'prefer-template': 'error',
 		quotes: [ 'error', 'single' ],
 		'require-atomic-updates': 'error',
-		'require-await': 'error',
-		'require-yield': 'error',
 		semi: [ 'error', 'always' ],
 		'space-before-function-paren': [ 'error', {
 			anonymous: 'never',

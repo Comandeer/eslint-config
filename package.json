@@ -8,7 +8,8 @@
     "pretest": "npm run lint",
     "test": "mocha tests/*.js --timeout 15000",
     "preversion": "npm test",
-    "postversion": "git push origin && git push origin --tags"
+    "postversion": "git push origin && git push origin --tags",
+    "prepare": "husky install"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -55,11 +56,11 @@
   },
   "devDependencies": {
     "@comandeer/is-ci": "^3.0.0",
-    "chai": "^4.3.0",
+    "chai": "^4.3.4",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.20.0",
-    "husky": "^5.0.9",
-    "mocha": "^8.3.0"
+    "eslint": "^7.26.0",
+    "husky": "^6.0.0",
+    "mocha": "^8.4.0"
   }
 }

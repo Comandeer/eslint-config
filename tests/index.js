@@ -9,7 +9,7 @@ const expect = chai.expect; // eslint-disable-line no-unused-vars
 describe( 'eslint-config', () => {
 	const fixturesPath = resolvePath( __dirname, 'fixtures' );
 
-	it( 'failse on incorrect code', createTest( {
+	it( 'fails on incorrect code', createTest( {
 		fixturePath: resolvePath( fixturesPath, 'invalid.js' ),
 		errorCount: 1
 	} ) );
@@ -30,7 +30,7 @@ describe( 'eslint-config', () => {
 	} ) );
 
 	// #32
-	it.only( 'disallows test environment globals in source files', createTest( {
+	it( 'disallows test environment globals in source files', createTest( {
 		fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
 		fakePath: 'src/myTests.js',
 		errorCount: 5
@@ -40,6 +40,18 @@ describe( 'eslint-config', () => {
 	it( 'allows test environment globals in test files', createTest( {
 		fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
 		fakePath: 'tests/myTests.js',
+		errorCount: 0
+	} ) );
+
+	// #37
+	it( 'allows async functions without await', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'asyncNoAwait.js' ),
+		errorCount: 0
+	} ) );
+
+	// #37
+	it( 'allows generators without yield', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'generatorNoYield.js' ),
 		errorCount: 0
 	} ) );
 } );
