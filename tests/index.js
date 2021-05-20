@@ -9,7 +9,7 @@ const expect = chai.expect; // eslint-disable-line no-unused-vars
 describe( 'eslint-config', () => {
 	const fixturesPath = resolvePath( __dirname, 'fixtures' );
 
-	it( 'failse on incorrect code', createTest( {
+	it( 'fails on incorrect code', createTest( {
 		fixturePath: resolvePath( fixturesPath, 'invalid.js' ),
 		errorCount: 1
 	} ) );
