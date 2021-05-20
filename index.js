@@ -7,7 +7,7 @@ module.exports = {
 	},
 	parserOptions: {
 		sourceType: 'module',
-		ecmaVersion: 2019,
+		ecmaVersion: 12,
 		ecmaFeatures: {
 			impliedStrict: true
 		}
