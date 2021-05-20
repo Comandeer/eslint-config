@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ---
 
 ## [0.4.0]
+### Added
+* [#39] Rules for Mocha
+	* [handle-done-callback](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/handle-done-callback.md)
+	* [max-top-level-suites](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/max-top-level-suites.md)
+	* [no-async-describe](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-async-describe.md)
+	* [no-exclusive-tests](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-exclusive-tests.md)
+	* [no-exports](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-exports.md)
+	* [no-global-tests](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-global-tests.md)
+	* [no-identical-title](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-identical-title.md)
+	* [no-nested-tests](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-nested-tests.md)
+	* [no-pending-tests](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-pending-tests.md)
+	* [no-return-and-callback](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-return-and-callback.md)
+	* [no-sibling-hooks](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-sibling-hooks.md)
+	* [no-skipped-tests](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-skipped-tests.md)
+	* [no-top-level-hooks](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-top-level-hooks.md)
+
 ### Changed
 * [#38] Set ESLint env to ES2021.
 
@@ -56,6 +72,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#32]: https://github.com/Comandeer/eslint-config/issues/32
 [#37]: https://github.com/Comandeer/eslint-config/issues/37
 [#38]: https://github.com/Comandeer/eslint-config/issues/38
+[#39]: https://github.com/Comandeer/eslint-config/issues/39
 
 [0.4.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.2...v0.3.0
