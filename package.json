@@ -4,9 +4,7 @@
   "description": "Shareable ESLint configuration",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint -c index.js index.js tests/*.js",
-    "pretest": "npm run lint",
-    "test": "mocha tests/*.js --timeout 15000",
+    "test": "mlt lint test",
     "preversion": "npm test",
     "postversion": "git push origin && git push origin --tags",
     "prepare": "husky install"
@@ -55,12 +53,10 @@
     "eslint": ">=6.0.1"
   },
   "devDependencies": {
-    "@comandeer/is-ci": "^3.0.0",
-    "chai": "^4.3.4",
+    "@comandeer/mocha-lib-tester": "^0.3.0",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.26.0",
-    "husky": "^6.0.0",
-    "mocha": "^8.4.0"
+    "husky": "^6.0.0"
   }
 }

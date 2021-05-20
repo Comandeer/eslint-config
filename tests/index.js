@@ -1,10 +1,7 @@
 const { readFile } = require( 'fs' ).promises;
 const { resolve: resolvePath } = require( 'path' );
 const { ESLint } = require( 'eslint' );
-const chai = require( 'chai' );
 const defaultConfig = require( '../index' );
-
-const expect = chai.expect; // eslint-disable-line no-unused-vars
 
 describe( 'eslint-config', () => {
 	const fixturesPath = resolvePath( __dirname, 'fixtures' );
