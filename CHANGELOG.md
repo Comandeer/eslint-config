@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [0.4.0]
+## [0.4.0] – 2021-05-20
 ### Added
 * [#39] Rules for Mocha
 	* [handle-done-callback](https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/handle-done-callback.md)
