@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.5.0] – 2021-11-19
+### Changed
+* [#45] **BREAKING CHANGE**: ignore `tests/__fixtures__` instead of `tests/fixtures/`.
+* [#46] **BREAKING CHANGE**: update dependencies:
+	* the minimal required version of ESLint was changed to `8.0.0`,
+	* the version of `eslint=plugin-mocha` was changed to `^9.0.0`.
+
+### Fixed
+* [#47] The `engine` field in `package.json` points to version 8 instead of 12.
+
 ## [0.4.0] – 2021-05-20
 ### Added
 * [#39] Rules for Mocha
@@ -73,7 +83,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#37]: https://github.com/Comandeer/eslint-config/issues/37
 [#38]: https://github.com/Comandeer/eslint-config/issues/38
 [#39]: https://github.com/Comandeer/eslint-config/issues/39
+[#45]: https://github.com/Comandeer/eslint-config/issues/45
+[#46]: https://github.com/Comandeer/eslint-config/issues/46
+[#47]: https://github.com/Comandeer/eslint-config/issues/47
 
+[0.4.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.2...v0.3.0
 [0.2.2]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.1...v0.2.2
