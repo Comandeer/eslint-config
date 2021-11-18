@@ -4,7 +4,7 @@ const { ESLint } = require( 'eslint' );
 const defaultConfig = require( '../index' );
 
 describe( 'eslint-config', () => {
-	const fixturesPath = resolvePath( __dirname, 'fixtures' );
+	const fixturesPath = resolvePath( __dirname, '__fixtures__' );
 
 	it( 'fails on incorrect code', createTest( {
 		fixturePath: resolvePath( fixturesPath, 'invalid.js' ),

@@ -19,7 +19,7 @@ module.exports = {
 	overrides: [
 		{
 			files: [ 'tests/**/*.js' ],
-			excludedFiles: [ 'tests/fixtures/**/*.js' ],
+			excludedFiles: [ 'tests/__fixtures__/**/*.js' ],
 			env: {
 				browser: true,
 				commonjs: true,
