@@ -57,6 +57,12 @@ describe( 'eslint-config', () => {
 		fixturePath: resolvePath( fixturesPath, 'es2021.js' ),
 		errorCount: 0
 	} ) );
+
+	// #49
+	it( 'allows incorrect JSDoc syntax', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'invalidJSDoc.js' ),
+		errorCount: 0
+	} ) );
 } );
 
 function createTest( {

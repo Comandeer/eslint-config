@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.6.0] – 2022-03-20
+### Removed
+* [#49] **BREAKING CHANGE**: [`valid-jsdoc`](https://eslint.org/docs/rules/valid-jsdoc) rule.
+
 ## [0.5.0] – 2021-11-19
 ### Changed
 * [#45] **BREAKING CHANGE**: ignore `tests/__fixtures__` instead of `tests/fixtures/`.
@@ -86,8 +90,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#45]: https://github.com/Comandeer/eslint-config/issues/45
 [#46]: https://github.com/Comandeer/eslint-config/issues/46
 [#47]: https://github.com/Comandeer/eslint-config/issues/47
+[#49]: https://github.com/Comandeer/eslint-config/issues/49
 
-[0.4.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.4.0...v0.5.0
+[0.6.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.5.0...v0.6.0
+[0.5.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.2...v0.3.0
 [0.2.2]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.1...v0.2.2
