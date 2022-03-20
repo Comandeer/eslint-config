@@ -63,6 +63,12 @@ describe( 'eslint-config', () => {
 		fixturePath: resolvePath( fixturesPath, 'invalidJSDoc.js' ),
 		errorCount: 0
 	} ) );
+
+	// #51
+	it( 'parses ES2022 code', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'privateFields.js' ),
+		errorCount: 0
+	} ) );
 } );
 
 function createTest( {
