@@ -182,7 +182,6 @@ module.exports = {
 		'space-unary-ops': 'error',
 		'spaced-comment': [ 'error', 'always' ],
 		'use-isnan': 'error',
-		'valid-jsdoc': 'error',
 		'valid-typeof': 'error',
 		'wrap-iife': [ 'error', 'outside' ],
 		'yield-star-spacing': [ 'error', 'after' ],
