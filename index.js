@@ -8,6 +8,9 @@ module.exports = {
 		es6: true,
 		node: true
 	},
+	globals: {
+		globalThis: 'readonly'
+	},
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 13,
