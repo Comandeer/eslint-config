@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.8.0]
+### Added
+* [#54]: support for Node 16.
+
 ## [0.7.0] – 2022-03-21
 ### Added
 * [#51]: support for ES2022 syntax.
@@ -96,7 +100,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#47]: https://github.com/Comandeer/eslint-config/issues/47
 [#49]: https://github.com/Comandeer/eslint-config/issues/49
 [#51]: https://github.com/Comandeer/eslint-config/issues/51
+[#54]: https://github.com/Comandeer/eslint-config/issues/54
 
+[0.8.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.4.0...v0.5.0
