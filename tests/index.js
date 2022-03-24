@@ -69,6 +69,19 @@ describe( 'eslint-config', () => {
 		fixturePath: resolvePath( fixturesPath, 'privateFields.js' ),
 		errorCount: 0
 	} ) );
+
+	// #53
+	it( 'recognizes globalThis global variable', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'globalThis.js' ),
+		errorCount: 0
+	} ) );
+
+	// #53
+	it( 'recognizes globalThis global variable in tests', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'globalThis.js' ),
+		fakePath: 'tests/globalThis.js',
+		errorCount: 0
+	} ) );
 } );
 
 function createTest( {

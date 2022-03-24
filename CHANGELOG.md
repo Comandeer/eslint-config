@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [0.8.0]
+## [0.8.0] – 2022-03-24
 ### Added
 * [#54]: support for Node 16.
+* [#53]: support for [`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) global variable.
 
 ## [0.7.0] – 2022-03-21
 ### Added
@@ -100,6 +101,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#47]: https://github.com/Comandeer/eslint-config/issues/47
 [#49]: https://github.com/Comandeer/eslint-config/issues/49
 [#51]: https://github.com/Comandeer/eslint-config/issues/51
+[#53]: https://github.com/Comandeer/eslint-config/issues/53
 [#54]: https://github.com/Comandeer/eslint-config/issues/54
 
 [0.8.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.7.0...v0.8.0
