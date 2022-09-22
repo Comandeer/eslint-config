@@ -1,7 +1,9 @@
 module.exports = {
 	plugins: [
-		'mocha'
+		'mocha',
+		'@typescript-eslint'
 	],
+	parser: '@typescript-eslint/parser',
 	env: {
 		browser: true,
 		commonjs: true,
