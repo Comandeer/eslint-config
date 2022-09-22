@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.9.0] – 2022-09-23
+### Added
+* [#57]: basic support for linting TypeScript code.
+* [#60]: support for Node 18.
+
+### Changed
+* [#58]: update dependencies.
+
+### Removed
+* [#60] **BREAKING CHANGE**: support for Node < 16.12.0.
+
 ## [0.8.0] – 2022-03-24
 ### Added
 * [#54]: support for Node 16.
@@ -103,7 +114,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#51]: https://github.com/Comandeer/eslint-config/issues/51
 [#53]: https://github.com/Comandeer/eslint-config/issues/53
 [#54]: https://github.com/Comandeer/eslint-config/issues/54
+[#57]: https://github.com/Comandeer/eslint-config/issues/57
+[#58]: https://github.com/Comandeer/eslint-config/issues/58
+[#60]: https://github.com/Comandeer/eslint-config/issues/60
 
+[0.9.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.8.0...v0.9.0
 [0.8.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.5.0...v0.6.0
