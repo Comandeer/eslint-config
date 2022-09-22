@@ -82,6 +82,12 @@ describe( 'eslint-config', () => {
 		fakePath: 'tests/globalThis.js',
 		errorCount: 0
 	} ) );
+
+	// #57
+	it( 'lints TS file', createTest( {
+		fixturePath: resolvePath( fixturesPath, 'valid.ts' ),
+		errorCount: 0
+	} ) );
 } );
 
 function createTest( {
