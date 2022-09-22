@@ -1,9 +1,2 @@
 {
-	"compilerOptions": {
-		"allowJs": true,
-		"outDir": "dist"
-	},
-	"include": [
-		"**/*"
-	]
 }
