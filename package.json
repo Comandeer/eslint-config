@@ -4,7 +4,9 @@
   "description": "Shareable ESLint configuration",
   "main": "index.js",
   "scripts": {
-    "test": "mlt lint test",
+    "lint": "eslint --ext .js,.cjs,.mjs,.ts,.cts,.mts ./src/**/* ./tests/**/*",
+    "pretest": "npm run lint && npm run build",
+    "test": "ava",
     "preversion": "npm test",
     "postversion": "git push origin && git push origin --tags",
     "prepare": "husky install"
@@ -53,7 +55,7 @@
     "eslint": ">=8.0.0"
   },
   "devDependencies": {
-    "@comandeer/mocha-lib-tester": "^0.6.0",
+    "ava": "^5.1.1",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.23.1",
