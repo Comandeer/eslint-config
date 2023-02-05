@@ -2,7 +2,7 @@ const { join: joinPath } = require( 'path' );
 
 module.exports = {
 	plugins: [
-		'mocha',
+		'ava',
 		'@typescript-eslint'
 	],
 	parser: '@typescript-eslint/parser',
@@ -80,32 +80,34 @@ module.exports = {
 		{
 			files: [ 'tests/**/*.js' ],
 			excludedFiles: [ 'tests/__fixtures__/**/*.js' ],
-			env: {
-				browser: true,
-				commonjs: true,
-				es6: true,
-				node: true,
-				mocha: true
-			},
-			globals: {
-				expect: 'readonly',
-				sinon: 'readonly',
-				proxyquire: 'readonly'
-			},
 			rules: {
-				'mocha/handle-done-callback': 'error',
-				'mocha/max-top-level-suites': [ 'error', { limit: 1 } ],
-				'mocha/no-async-describe': 'error',
-				'mocha/no-exclusive-tests': 'error',
-				'mocha/no-exports': 'error',
-				'mocha/no-global-tests': 'error',
-				'mocha/no-identical-title': 'error',
-				'mocha/no-nested-tests': 'error',
-				'mocha/no-pending-tests': 'error',
-				'mocha/no-return-and-callback': 'error',
-				'mocha/no-sibling-hooks': 'error',
-				'mocha/no-skipped-tests': 'error',
-				'mocha/no-top-level-hooks': 'error'
+				'ava/assertion-arguments': 'error',
+				'ava/hooks-order': 'error',
+				'ava/max-asserts': 'off',
+				'ava/no-async-fn-without-await': 'error',
+				'ava/no-duplicate-modifiers': 'error',
+				'ava/no-identical-title': 'error',
+				'ava/no-ignored-test-files': 'off',
+				'ava/no-import-test-files': 'error',
+				'ava/no-incorrect-deep-equal': 'error',
+				'ava/no-inline-assertions': 'error',
+				'ava/no-nested-tests': 'error',
+				'ava/no-only-test': 'error',
+				'ava/no-skip-assert': 'error',
+				'ava/no-skip-test': 'error',
+				'ava/no-todo-implementation': 'error',
+				'ava/no-todo-test': 'error',
+				'ava/no-unknown-modifiers': 'error',
+				'ava/prefer-async-await': 'error',
+				'ava/prefer-power-assert': 'off',
+				'ava/prefer-t-regex': 'error',
+				'ava/test-title': 'error',
+				'ava/test-title-format': 'off',
+				'ava/use-t': 'error',
+				'ava/use-t-throws-async-well': 'error',
+				'ava/use-t-well': 'error',
+				'ava/use-test': 'error',
+				'ava/use-true-false': 'error'
 			}
 		}
 	],
