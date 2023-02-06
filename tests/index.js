@@ -1,117 +1,88 @@
-const { readFile } = require( 'fs' ).promises;
-const { resolve: resolvePath } = require( 'path' );
-const { ESLint } = require( 'eslint' );
-const defaultConfig = require( '../index' );
+const { resolve: resolvePath } = require( 'node:path' );
+const test = require( 'ava' );
+const testRule = require( './__helpers__/testRule.js' );
 
-describe( 'eslint-config', () => {
-	const fixturesPath = resolvePath( __dirname, '__fixtures__' );
+const fixturesPath = resolvePath( __dirname, '__fixtures__' );
 
-	it( 'fails on incorrect code', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'invalid.js' ),
-		errorCount: 1
-	} ) );
-
-	it( 'passes on correct code', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'valid.js' )
-	} ) );
-
-	// #21
-	it( 'allows space after async keyword in arrow functions', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'asyncArrow.js' )
-	} ) );
-
-	// #23
-	it( 'disallows console usage', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'console.js' ),
-		errorCount: 4
-	} ) );
-
-	// #32
-	it( 'disallows test environment globals in source files', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
-		fakePath: 'src/myTests.js',
-		errorCount: 5
-	} ) );
-
-	// #32
-	it( 'allows test environment globals in test files', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
-		fakePath: 'tests/myTests.js',
-		errorCount: 0
-	} ) );
-
-	// #37
-	it( 'allows async functions without await', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'asyncNoAwait.js' ),
-		errorCount: 0
-	} ) );
-
-	// #37
-	it( 'allows generators without yield', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'generatorNoYield.js' ),
-		errorCount: 0
-	} ) );
-
-	// #38
-	it( 'parses ES2021 code', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'es2021.js' ),
-		errorCount: 0
-	} ) );
-
-	// #49
-	it( 'allows incorrect JSDoc syntax', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'invalidJSDoc.js' ),
-		errorCount: 0
-	} ) );
-
-	// #51
-	it( 'parses ES2022 code', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'privateFields.js' ),
-		errorCount: 0
-	} ) );
-
-	// #53
-	it( 'recognizes globalThis global variable', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'globalThis.js' ),
-		errorCount: 0
-	} ) );
-
-	// #53
-	it( 'recognizes globalThis global variable in tests', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'globalThis.js' ),
-		fakePath: 'tests/globalThis.js',
-		errorCount: 0
-	} ) );
-
-	// #57
-	it( 'lints TS file', createTest( {
-		fixturePath: resolvePath( fixturesPath, 'valid.ts' ),
-		errorCount: 0
-	} ) );
+test( 'it fails on incorrect code', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'invalid.js' ),
+	errorCount: 1
 } );
 
-function createTest( {
-	fixturePath,
-	config = defaultConfig,
-	fakePath = fixturePath,
-	errorCount = 0
-} = {} ) {
-	return async () => {
-		const [ results ] = await lintFile( fixturePath, config, fakePath );
+test( 'it passes on correct code', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'valid.js' )
+} );
 
-		expect( results.errorCount ).to.equal( errorCount );
-	};
-}
+// #21
+test( 'it allows space after async keyword in arrow functions', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'asyncArrow.js' )
+} );
 
-async function lintFile( path, config, fakePath = path ) {
-	const code = await readFile( path, 'utf8' );
-	const eslint = new ESLint( {
-		useEslintrc: false,
-		baseConfig: config
-	} );
-	const report = await eslint.lintText( code, {
-		filePath: fakePath
-	} );
+// #23
+test( 'disallows console usage', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'console.js' ),
+	errorCount: 4
+} );
 
-	return report;
-}
+// #32
+test( 'disallows test environment globals in source files', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
+	fakePath: 'src/myTests.js',
+	errorCount: 5
+} );
+
+// #32, #64
+test( 'disallows test environment globals in test files', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
+	fakePath: 'tests/myTests.js',
+	errorCount: 5
+} );
+
+// #37
+test( 'allows async functions without await', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'asyncNoAwait.js' ),
+	errorCount: 0
+} );
+
+// #37
+test( 'allows generators without yield', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'generatorNoYield.js' ),
+	errorCount: 0
+} );
+
+// #38
+test( 'parses ES2021 code', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'es2021.js' ),
+	errorCount: 0
+} );
+
+// #49
+test( 'allows incorrect JSDoc syntax', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'invalidJSDoc.js' ),
+	errorCount: 0
+} );
+
+// #51
+test( 'parses ES2022 code', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'privateFields.js' ),
+	errorCount: 0
+} );
+
+// #53
+test( 'recognizes globalThis global variable', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'globalThis.js' ),
+	errorCount: 0
+} );
+
+// #53
+test( 'recognizes globalThis global variable in tests', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'globalThis.js' ),
+	fakePath: 'tests/globalThis.js',
+	errorCount: 0
+} );
+
+// #57
+test( 'lints TS file', testRule, {
+	fixturePath: resolvePath( fixturesPath, 'valid.ts' ),
+	errorCount: 0
+} );
