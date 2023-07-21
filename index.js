@@ -1,6 +1,6 @@
-const { join: joinPath } = require( 'path' );
+import { join as joinPath } from 'node:path';
 
-module.exports = {
+export default {
 	plugins: [
 		'ava',
 		'@typescript-eslint'

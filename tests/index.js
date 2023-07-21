@@ -1,6 +1,6 @@
-const { resolve: resolvePath } = require( 'node:path' );
-const test = require( 'ava' );
-const testRule = require( './__helpers__/testRule.js' );
+import { resolve as resolvePath } from 'node:path';
+import test from 'ava';
+import testRule from './__helpers__/testRule.js';
 
 const fixturesPath = resolvePath( __dirname, '__fixtures__' );
 

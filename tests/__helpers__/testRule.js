@@ -1,9 +1,9 @@
-const { readFile } = require( 'node:fs/promises' );
-const test = require( 'ava' );
-const { ESLint } = require( 'eslint' );
-const defaultConfig = require( '../../index.js' );
+import { readFile } from 'node:fs/promises';
+import test from 'ava';
+import { ESLint } from 'eslint';
+import defaultConfig from '../../index.js';
 
-const testRule = test.macro( async ( t, {
+export default test.macro( async ( t, {
 	fixturePath,
 	config = defaultConfig,
 	fakePath = fixturePath,
@@ -27,5 +27,3 @@ async function lintFile( path, config, fakePath = path ) {
 
 	return report;
 }
-
-module.exports = testRule;

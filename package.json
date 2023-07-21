@@ -1,8 +1,13 @@
 {
   "name": "@comandeer/eslint-config",
   "version": "0.10.0",
+  "type": "module",
   "description": "Shareable ESLint configuration",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js"
+    }
+  },
   "scripts": {
     "lint": "eslint --ext .js,.cjs,.mjs,.ts,.cts,.mts \"index.js\" \"tests/**/*\"",
     "pretest": "npm run lint",
