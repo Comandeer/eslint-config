@@ -5,13 +5,14 @@
   "description": "Shareable ESLint configuration",
   "exports": {
     ".": {
-      "import": "./index.js"
+      "import": "./dist/eslint-config.mjs"
     }
   },
   "scripts": {
     "lint": "eslint --ext .js,.cjs,.mjs,.ts,.cts,.mts \"index.js\" \"tests/**/*\"",
+    "build": "rlb",
     "test": "ava",
-    "preversion": "npm test",
+    "preversion": "npm test && npm run build",
     "postversion": "git push origin && git push origin --tags",
     "prepare": "husky install"
   },
@@ -59,6 +60,7 @@
     "eslint": ">=8.0.0"
   },
   "devDependencies": {
+    "@comandeer/rollup-lib-bundler": "^0.21.0",
     "ava": "^5.1.1",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",

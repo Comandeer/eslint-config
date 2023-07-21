@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import test from 'ava';
 import { ESLint } from 'eslint';
-import defaultConfig from '../../index.js';
+import defaultConfig from '../../src/index.js';
 
 export default test.macro( async ( t, {
 	fixturePath,
