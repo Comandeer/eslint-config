@@ -1,7 +1,9 @@
-import { resolve as resolvePath } from 'node:path';
+import { dirname, resolve as resolvePath } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import test from 'ava';
 import testRule from './__helpers__/testRule.js';
 
+const __dirname = dirname( fileURLToPath( import.meta.url ) );
 const fixturesPath = resolvePath( __dirname, '__fixtures__' );
 
 test( 'it fails on incorrect code', testRule, {
