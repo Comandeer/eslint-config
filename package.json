@@ -66,7 +66,9 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.45.0",
     "execa": "^7.1.1",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "pathe": "^1.1.1",
+    "tempy": "^3.1.0"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.1.0",
