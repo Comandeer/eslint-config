@@ -1,10 +1,10 @@
+import * as globPatterns from './globPatterns.js';
 export default {
 	files: [
-		'**/*.{js,cjs,mjs,ts,cts,mts}'
+		globPatterns.allFiles
 	],
-	ignores: [
-		'tests/__fixtures__/**/*.{js,cjs,mjs,ts,cts,mts}'
-	],
+
+	ignores: globPatterns.ignoredFiles,
 
 	rules: {
 		'array-bracket-spacing': [ 'error', 'always' ],

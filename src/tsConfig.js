@@ -1,12 +1,17 @@
 import typescriptParser from '@typescript-eslint/parser';
+import typescript from '@typescript-eslint/eslint-plugin';
+import * as globPatterns from './globPatterns.js';
 
 export default {
 	files: [
-		'**/*.{ts,cts,mts'
+		globPatterns.tsFiles
 	],
-	ignores: [
-		'tests/__fixtures__/**/*.{js,cjs,mjs,ts,cts,mts}'
-	],
+
+	ignores: globPatterns.ignoredFiles,
+
+	plugins: {
+		'@typescript-eslint': typescript
+	},
 
 	languageOptions: {
 		parser: typescriptParser,

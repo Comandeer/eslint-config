@@ -1,16 +1,16 @@
 import ava from 'eslint-plugin-ava';
+import * as globPatterns from './globPatterns.js';
 
 export default {
 	files: [
-		'tests/**/*.{js,cjs,mjs,ts,cts,mts'
-	],
-	ignores: [
-		'tests/__fixtures__/**/*.{js,cjs,mjs,ts,cts,mts}'
+		`tests/${ globPatterns.allFiles }`
 	],
 
-	plugins: [
+	ignores: globPatterns.ignoredFiles,
+
+	plugins: {
 		ava
-	],
+	},
 
 	rules: {
 		'ava/assertion-arguments': 'error',
