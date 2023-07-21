@@ -81,5 +81,6 @@ test.serial( 'recognizes globalThis global variable in tests', testRule, {
 // #57
 test.serial( 'lints TS file', testRule, {
 	fixtureName: 'valid.ts',
-	expectedErrorCount: 0
+	expectedErrorCount: 0,
+	tsConfig: {}
 } );
