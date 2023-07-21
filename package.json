@@ -65,6 +65,7 @@
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.45.0",
+    "execa": "^7.1.1",
     "husky": "^8.0.3"
   },
   "dependencies": {
