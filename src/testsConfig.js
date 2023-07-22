@@ -6,8 +6,6 @@ export default {
 		`tests/${ globPatterns.allFiles }`
 	],
 
-	ignores: globPatterns.ignoredFiles,
-
 	plugins: {
 		ava
 	},

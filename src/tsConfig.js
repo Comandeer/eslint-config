@@ -7,8 +7,6 @@ export default {
 		globPatterns.tsFiles
 	],
 
-	ignores: globPatterns.ignoredFiles,
-
 	plugins: {
 		'@typescript-eslint': typescript
 	},

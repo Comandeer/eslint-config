@@ -4,8 +4,6 @@ export default {
 		globPatterns.allFiles
 	],
 
-	ignores: globPatterns.ignoredFiles,
-
 	rules: {
 		'array-bracket-spacing': [ 'error', 'always' ],
 		'array-callback-return': 'error',
