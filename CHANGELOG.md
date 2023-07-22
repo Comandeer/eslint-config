@@ -9,22 +9,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.11.0] – 2023-07-22
 ### Added
 * [#67]: new rules for linting TS files.
+* [#74]: support for import attributes/assertions syntax.
 
 ### Changed
 * [#59]: **BREAKING CHANGE**: move to the new config system.
 * [#73]: **BREAKING CHANGE**: move the codebase to ESM.
 * [#70]: **BREAKING CHANGE**: use TS parser only for TS files.
 * [#72]: **BREAKING CHANGE**: separate formatting rules as a `./formatting` subpath export.
+* [#74]: **BREAKING CHANGE**: use `@babel/eslint-parser` for JS files.
 * [#71]: **BREAKING CHANGE**: updated dependencies:
 
 	| Dependency                           | Old version | New version |
 	| ------------------------------------ | ----------- | ----------- |
+	| ⭐ `@babel/core`                      | N/A         | `^7.22.9`   |
+	| ⭐ `@babel/eslint-parser`             | N/A         | `^7.22.9`   |
+	| ⭐ `@babel/eslint-plugin`             | N/A         | `^7.22.5`   |
+	| ⭐ `@babel/preset-env`                | N/A         | `^7.22.9`   |
 	| ⚠️ `@typescript-eslint/eslint-plugin` | `^5.38.0`   | `^6.1.0`    |
 	| ⚠️ `@typescript-eslint/parser`        | `^5.38.0`   | `^6.1.0`    |
 	| ⭐ `globals`                          | N/A         | `^13.20.0`  |
-
+	
 	New dependencies are marked with the "⭐" emoji.
-
+	
 	Dependencies with major version change are marked with the "⚠️" emoji.
 
 ### Fixed
@@ -153,6 +159,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#70]: https://github.com/Comandeer/eslint-config/issues/70
 [#71]: https://github.com/Comandeer/eslint-config/issues/71
 [#73]: https://github.com/Comandeer/eslint-config/issues/73
+[#74]: https://github.com/Comandeer/eslint-config/issues/74
 
 [0.11.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.9.0...v0.10.0
