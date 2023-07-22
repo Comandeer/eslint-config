@@ -1,9 +1,9 @@
-import ignoresConfig from './ignoresConfig.js';
+import baseConfig from './baseConfig.js';
 import jsConfig from './formatting/jsConfig.js';
 import tsConfig from './formatting/tsConfig.js';
 
 export default [
-	ignoresConfig,
+	...baseConfig,
 	jsConfig,
 	tsConfig
 ];

@@ -1,31 +1,9 @@
-import babelParser from '@babel/eslint-parser';
-import babelPlugin from '@babel/eslint-plugin';
-import envPreset from '@babel/preset-env';
 import * as globPatterns from './globPatterns.js';
 
 export default {
 	files: [
 		globPatterns.allFiles
 	],
-
-	plugins: {
-		'@babel': babelPlugin
-	},
-
-	languageOptions: {
-		parser: babelParser,
-		parserOptions: {
-			requireConfigFile: false,
-			sourceType: 'module',
-			babelOptions: {
-				babelrc: false,
-				configFile: false,
-				presets: [
-					envPreset
-				]
-			}
-		}
-	},
 
 	rules: {
 		'@babel/no-invalid-this': 'error',

@@ -1,22 +1,9 @@
-import typescriptParser from '@typescript-eslint/parser';
-import typescript from '@typescript-eslint/eslint-plugin';
 import * as globPatterns from '../globPatterns.js';
 
 export default {
 	files: [
 		globPatterns.tsFiles
 	],
-
-	plugins: {
-		'@typescript-eslint': typescript
-	},
-
-	languageOptions: {
-		parser: typescriptParser,
-		parserOptions: {
-			project: './tsconfig.json'
-		}
-	},
 
 	rules: {
 		'brace-style': 'off',
