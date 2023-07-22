@@ -57,7 +57,7 @@
     }
   },
   "peerDependencies": {
-    "eslint": ">=8.0.0"
+    "eslint": ">=8.45.0"
   },
   "devDependencies": {
     "@comandeer/rollup-lib-bundler": "^0.21.0",
