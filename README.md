@@ -12,12 +12,24 @@ npm install @comandeer/eslint-config --save-dev
 
 ## Usage
 
-Put it inside your `.eslintrc.json` file:
+Put it inside your `eslint.config.js` file:
 
-```json
-{
-	"extends": "@comandeer/eslint-config"
-}
+```javascript
+import eslintConfig from '@comandeer/eslint-config';
+
+export default eslintConfig;
+```
+
+Optionally, you could also include formatting rules:
+
+```javascript
+import eslintConfig from '@comandeer/eslint-config';
+import formattingConfig from '@comandeer/eslint-config/formatting';
+
+export default [
+	...eslintConfig,
+	...formattingConfig
+];
 ```
 
 ## License

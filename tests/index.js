@@ -1,88 +1,104 @@
-const { resolve: resolvePath } = require( 'node:path' );
-const test = require( 'ava' );
-const testRule = require( './__helpers__/testRule.js' );
+import test from 'ava';
+import testRule from './__helpers__/testRule.js';
 
-const fixturesPath = resolvePath( __dirname, '__fixtures__' );
+const defaultTSConfig = {
+	compilerOptions: {
+		strict: true
+	}
+};
 
-test( 'it fails on incorrect code', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'invalid.js' ),
-	errorCount: 1
+test.serial( 'it fails on incorrect code', testRule, {
+	fixtureName: 'invalid.js',
+	expectedErrorCount: 1
 } );
 
-test( 'it passes on correct code', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'valid.js' )
+test.serial( 'it passes on correct code', testRule, {
+	fixtureName: 'valid.js'
 } );
 
 // #21
-test( 'it allows space after async keyword in arrow functions', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'asyncArrow.js' )
+test.serial( 'it allows space after async keyword in arrow functions', testRule, {
+	fixtureName: 'asyncArrow.js'
 } );
 
 // #23
-test( 'disallows console usage', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'console.js' ),
-	errorCount: 4
+test.serial( 'disallows console usage', testRule, {
+	fixtureName: 'console.js',
+	expectedErrorCount: 4
 } );
 
 // #32
-test( 'disallows test environment globals in source files', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
+test.serial( 'disallows test environment globals in source files', testRule, {
+	fixtureName: 'testGlobals.js',
 	fakePath: 'src/myTests.js',
-	errorCount: 5
+	expectedErrorCount: 5
 } );
 
 // #32, #64
-test( 'disallows test environment globals in test files', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'testGlobals.js' ),
+test.serial( 'disallows test environment globals in test files', testRule, {
+	fixtureName: 'testGlobals.js',
 	fakePath: 'tests/myTests.js',
-	errorCount: 5
+	expectedErrorCount: 5
 } );
 
 // #37
-test( 'allows async functions without await', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'asyncNoAwait.js' ),
-	errorCount: 0
+test.serial( 'allows async functions without await', testRule, {
+	fixtureName: 'asyncNoAwait.js',
+	expectedErrorCount: 0
 } );
 
 // #37
-test( 'allows generators without yield', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'generatorNoYield.js' ),
-	errorCount: 0
+test.serial( 'allows generators without yield', testRule, {
+	fixtureName: 'generatorNoYield.js',
+	expectedErrorCount: 0
 } );
 
 // #38
-test( 'parses ES2021 code', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'es2021.js' ),
-	errorCount: 0
+test.serial( 'parses ES2021 code', testRule, {
+	fixtureName: 'es2021.js',
+	expectedErrorCount: 0
 } );
 
 // #49
-test( 'allows incorrect JSDoc syntax', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'invalidJSDoc.js' ),
-	errorCount: 0
+test.serial( 'allows incorrect JSDoc syntax', testRule, {
+	fixtureName: 'invalidJSDoc.js',
+	expectedErrorCount: 0
 } );
 
 // #51
-test( 'parses ES2022 code', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'privateFields.js' ),
-	errorCount: 0
+test.serial( 'parses ES2022 code', testRule, {
+	fixtureName: 'privateFields.js',
+	expectedErrorCount: 0
 } );
 
 // #53
-test( 'recognizes globalThis global variable', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'globalThis.js' ),
-	errorCount: 0
+test.serial( 'recognizes globalThis global variable', testRule, {
+	fixtureName: 'globalThis.js',
+	expectedErrorCount: 0
 } );
 
 // #53
-test( 'recognizes globalThis global variable in tests', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'globalThis.js' ),
+test.serial( 'recognizes globalThis global variable in tests', testRule, {
+	fixtureName: 'globalThis.js',
 	fakePath: 'tests/globalThis.js',
-	errorCount: 0
+	expectedErrorCount: 0
 } );
 
 // #57
-test( 'lints TS file', testRule, {
-	fixturePath: resolvePath( fixturesPath, 'valid.ts' ),
-	errorCount: 0
+test.serial( 'lints TS file', testRule, {
+	fixtureName: 'valid.ts',
+	expectedErrorCount: 0,
+	tsConfig: defaultTSConfig
+} );
+
+// #74
+test.serial( 'parses import assertions syntax', testRule, {
+	fixtureName: 'importAssertionsSyntax.js',
+	expectedErrorCount: 0
+} );
+
+// #74
+test.serial( 'parses import attributes syntax', testRule, {
+	fixtureName: 'importAttributesSyntax.js',
+	expectedErrorCount: 0
 } );

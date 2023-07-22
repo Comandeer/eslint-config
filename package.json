@@ -1,13 +1,21 @@
 {
   "name": "@comandeer/eslint-config",
   "version": "0.10.0",
+  "type": "module",
   "description": "Shareable ESLint configuration",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/eslint-config.mjs"
+    },
+    "./formatting": {
+      "import": "./dist/eslint-config-formatting.mjs"
+    }
+  },
   "scripts": {
-    "lint": "eslint --ext .js,.cjs,.mjs,.ts,.cts,.mts \"index.js\" \"tests/**/*\"",
-    "pretest": "npm run lint",
+    "lint": "eslint \"{src,tests}/**/*.js\"",
+    "build": "rlb",
     "test": "ava",
-    "preversion": "npm test",
+    "preversion": "npm test && npm run build",
     "postversion": "git push origin && git push origin --tags",
     "prepare": "husky install"
   },
@@ -52,18 +60,28 @@
     }
   },
   "peerDependencies": {
-    "eslint": ">=8.0.0"
+    "eslint": ">=8.45.0"
   },
   "devDependencies": {
-    "ava": "^5.1.1",
+    "@comandeer/rollup-lib-bundler": "^0.21.0",
+    "ava": "^5.3.1",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.23.1",
-    "husky": "^8.0.1"
+    "eslint": "^8.45.0",
+    "execa": "^7.1.1",
+    "husky": "^8.0.3",
+    "pathe": "^1.1.1",
+    "tempy": "^3.1.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.38.0",
-    "@typescript-eslint/parser": "^5.38.0",
-    "eslint-plugin-ava": "^14.0.0"
+    "@babel/core": "^7.22.9",
+    "@babel/eslint-parser": "^7.22.9",
+    "@babel/eslint-plugin": "^7.22.5",
+    "@babel/plugin-syntax-import-attributes": "^7.22.5",
+    "@babel/preset-env": "^7.22.9",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint-plugin-ava": "^14.0.0",
+    "globals": "^13.20.0"
   }
 }
