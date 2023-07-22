@@ -19,15 +19,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 * [#74]: **BREAKING CHANGE**: use `@babel/eslint-parser` for JS files.
 * [#71]: **BREAKING CHANGE**: updated dependencies:
 
-	| Dependency                           | Old version | New version |
-	| ------------------------------------ | ----------- | ----------- |
-	| ⭐ `@babel/core`                      | N/A         | `^7.22.9`   |
-	| ⭐ `@babel/eslint-parser`             | N/A         | `^7.22.9`   |
-	| ⭐ `@babel/eslint-plugin`             | N/A         | `^7.22.5`   |
-	| ⭐ `@babel/preset-env`                | N/A         | `^7.22.9`   |
-	| ⚠️ `@typescript-eslint/eslint-plugin` | `^5.38.0`   | `^6.1.0`    |
-	| ⚠️ `@typescript-eslint/parser`        | `^5.38.0`   | `^6.1.0`    |
-	| ⭐ `globals`                          | N/A         | `^13.20.0`  |
+	| Dependency                                 | Old version | New version |
+	| ------------------------------------------ | ----------- | ----------- |
+	| ⭐ `@babel/core`                            | N/A         | `^7.22.9`   |
+	| ⭐ `@babel/eslint-parser`                   | N/A         | `^7.22.9`   |
+	| ⭐ `@babel/eslint-plugin`                   | N/A         | `^7.22.5`   |
+	| ⭐ `@babel/plugin-syntax-import-attributes` | N/A         | `^7.22.5`   |
+	| ⭐ `@babel/preset-env`                      | N/A         | `^7.22.9`   |
+	| ⚠️ `@typescript-eslint/eslint-plugin`       | `^5.38.0`   | `^6.1.0`    |
+	| ⚠️ `@typescript-eslint/parser`              | `^5.38.0`   | `^6.1.0`    |
+	| ⭐ `globals`                                | N/A         | `^13.20.0`  |
 	
 	New dependencies are marked with the "⭐" emoji.
 	
