@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.11.1] – 2023-07-22
+### Fixed
+* [#76]: incorrect publishing workflow resulting in an incorrect package being published.
+
 ## [0.11.0] – 2023-07-22
 ### Added
 * [#67]: new rules for linting TS files.
@@ -29,9 +33,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 	| ⚠️ `@typescript-eslint/eslint-plugin`       | `^5.38.0`   | `^6.1.0`    |
 	| ⚠️ `@typescript-eslint/parser`              | `^5.38.0`   | `^6.1.0`    |
 	| ⭐ `globals`                                | N/A         | `^13.20.0`  |
-	
+
 	New dependencies are marked with the "⭐" emoji.
-	
+
 	Dependencies with major version change are marked with the "⚠️" emoji.
 
 ### Fixed
@@ -161,7 +165,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#71]: https://github.com/Comandeer/eslint-config/issues/71
 [#73]: https://github.com/Comandeer/eslint-config/issues/73
 [#74]: https://github.com/Comandeer/eslint-config/issues/74
+[#76]: https://github.com/Comandeer/eslint-config/issues/76
 
+[0.11.1]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.8.0...v0.9.0
