@@ -1,6 +1,7 @@
 import babelParser from '@babel/eslint-parser';
 import babelPlugin from '@babel/eslint-plugin';
 import envPreset from '@babel/preset-env';
+import importAttributesSyntaxPlugin from '@babel/plugin-syntax-import-attributes';
 import typescriptParser from '@typescript-eslint/parser';
 import typescript from '@typescript-eslint/eslint-plugin';
 import globals from 'globals';
@@ -52,6 +53,14 @@ export default [
 					configFile: false,
 					presets: [
 						envPreset
+					],
+					plugins: [
+						[
+							importAttributesSyntaxPlugin,
+							{
+								deprecatedAssertSyntax: true
+							}
+						]
 					]
 				}
 			}

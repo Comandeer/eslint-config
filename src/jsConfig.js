@@ -7,7 +7,6 @@ export default {
 
 	rules: {
 		'@babel/no-invalid-this': 'error',
-		'@babel/no-unused-expressions': 'error',
 		'constructor-super': 'error',
 		'default-case': 'off',
 		'eqeqeq': [ 'error', 'smart' ],
