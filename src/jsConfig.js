@@ -1,10 +1,35 @@
+import babelParser from '@babel/eslint-parser';
+import babelPlugin from '@babel/eslint-plugin';
+import envPreset from '@babel/preset-env';
 import * as globPatterns from './globPatterns.js';
+
 export default {
 	files: [
 		globPatterns.allFiles
 	],
 
+	plugins: {
+		'@babel': babelPlugin
+	},
+
+	languageOptions: {
+		parser: babelParser,
+		parserOptions: {
+			requireConfigFile: false,
+			sourceType: 'module',
+			babelOptions: {
+				babelrc: false,
+				configFile: false,
+				presets: [
+					envPreset
+				]
+			}
+		}
+	},
+
 	rules: {
+		'@babel/no-invalid-this': 'error',
+		'@babel/no-unused-expressions': 'error',
 		'constructor-super': 'error',
 		'default-case': 'off',
 		'eqeqeq': [ 'error', 'smart' ],
@@ -12,7 +37,8 @@ export default {
 		'getter-return': [ 'error', {
 			allowImplicit: true
 		} ],
-		'new-cap': 'error',
+		'new-cap': 'off',
+		'@babel/new-cap': 'error',
 		'no-array-constructor': 'error',
 		'no-async-promise-executor': 'error',
 		'no-await-in-loop': 'error',

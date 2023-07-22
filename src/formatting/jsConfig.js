@@ -50,10 +50,12 @@ export default {
 			max: 1
 		} ],
 		'no-trailing-spaces': 'error',
-		'object-curly-spacing': [ 'error', 'always' ],
+		'object-curly-spacing': 'off',
+		'@babel/object-curly-spacing': [ 'error', 'always' ],
 		'object-shorthand': [ 'error', 'always' ],
 		'quotes': [ 'error', 'single' ],
-		'semi': [ 'error', 'always' ],
+		'semi': 'off',
+		'@babel/semi': [ 'error', 'always' ],
 		'space-before-function-paren': [ 'error', {
 			anonymous: 'never',
 			named: 'never',
