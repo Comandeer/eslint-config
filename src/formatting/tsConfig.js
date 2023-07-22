@@ -27,6 +27,7 @@ export default {
 		'@typescript-eslint/object-curly-spacing': [ 'error', 'always' ],
 		'quotes': 'off',
 		'@typescript-eslint/quotes': [ 'error', 'single' ],
+		'@babel/semi': 'off',
 		'semi': 'off',
 		'@typescript-eslint/semi': [ 'error', 'always' ],
 		'space-before-function-paren': 'off',
