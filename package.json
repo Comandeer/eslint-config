@@ -6,6 +6,9 @@
   "exports": {
     ".": {
       "import": "./dist/eslint-config.mjs"
+    },
+    "./formatting": {
+      "import": "./dist/eslint-config-formatting.mjs"
     }
   },
   "scripts": {

@@ -6,7 +6,7 @@ import { dirname, resolve as resolvePath } from 'pathe';
 import { temporaryDirectoryTask } from 'tempy';
 
 const __dirname = dirname( fileURLToPath( import.meta.url ) );
-const defaultConfigFilePath = resolvePath( __dirname, '..', '..', 'dist', 'eslint-config.mjs' );
+const defaultConfigFilePath = resolvePath( __dirname, '..', '..', 'eslint.config.js' );
 const fixtureDirPath = resolvePath( __dirname, '..', '__fixtures__' );
 const resultRegex = / (?<count>\d+) problem/u;
 
