@@ -1,6 +1,12 @@
 import test from 'ava';
 import testRule from './__helpers__/testRule.js';
 
+const defaultTSConfig = {
+	compilerOptions: {
+		strict: true
+	}
+};
+
 test.serial( 'it fails on incorrect code', testRule, {
 	fixtureName: 'invalid.js',
 	expectedErrorCount: 1
@@ -82,5 +88,5 @@ test.serial( 'recognizes globalThis global variable in tests', testRule, {
 test.serial( 'lints TS file', testRule, {
 	fixtureName: 'valid.ts',
 	expectedErrorCount: 0,
-	tsConfig: {}
+	tsConfig: defaultTSConfig
 } );

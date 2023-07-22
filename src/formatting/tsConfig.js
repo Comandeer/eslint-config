@@ -49,6 +49,21 @@ export default {
 			asyncArrow: 'always'
 		} ],
 		'space-infix-ops': 'off',
-		'@typescript-eslint/space-infix-ops': 'error'
+		'@typescript-eslint/space-infix-ops': 'error',
+
+		'@typescript-eslint/member-delimiter-style': 'error',
+		'@typescript-eslint/type-annotation-spacing': [
+			'error',
+			{
+				before: false,
+				after: true,
+				overrides: {
+					arrow: {
+						before: true,
+						after: true
+					}
+				}
+			}
+		]
 	}
 };

@@ -6,6 +6,7 @@ export default {
 
 	rules: {
 		'constructor-super': 'error',
+		'default-case': 'off',
 		'eqeqeq': [ 'error', 'smart' ],
 		'for-direction': 'error',
 		'getter-return': [ 'error', {
