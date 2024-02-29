@@ -102,3 +102,10 @@ test.serial( 'parses import attributes syntax', testRule, {
 	fixtureName: 'importAttributesSyntax.js',
 	expectedErrorCount: 0
 } );
+
+// #79
+test.serial( 'no-undef rule is not used for TS code', testRule, {
+	fixtureName: 'noUndef.ts',
+	expectedErrorCount: 0,
+	tsConfig: defaultTSConfig
+} );

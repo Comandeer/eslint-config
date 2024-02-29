@@ -6,6 +6,7 @@ export default {
 	],
 
 	rules: {
+		'no-undef': 'off',
 		'no-array-constructor': 'off',
 		'@typescript-eslint/no-array-constructor': 'error',
 		'no-dupe-class-members': 'off',
