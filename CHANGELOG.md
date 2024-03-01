@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 * [#81]: basic support for monorepo.
 
 ### Changed
+* [#80]: **BREAKING CHANGE**: move formatting rules to `@stylistic`.
 * [#82]: **BREAKING CHANGE**: updated dependencies:
 
 	| Dependency                               | Old version | New version |
@@ -20,9 +21,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 	| `@babel/eslint-plugin`                   | `^7.22.5`   | `7.23.5`    |
 	| `@babel/plugin-syntax-import-attributes` | `^7.22.5`   | `^7.23.3`   |
 	| `@babel/preset-env`                      | `^7.22.9`   | `^7.24.0`   |
+	| ⭐ `@stylistic/eslint-plugin`             | N/A         | `^1.6.3`    |
 	| ⚠️ `@typescript-eslint/eslint-plugin`     | `^6.1.0`    | `^7.1.0`    |
 	| ⚠️ `@typescript-eslint/parser`            | `^6.1.0`    | `^7.1.0`    |
 	| ⚠️ `globals`                              | `^13.20.0`  | `^14.0.0`   |
+
+	New dependencies are marked with the "⭐" emoji.
 
 	Dependencies with major version change are marked with the "⚠️" emoji.
 
@@ -190,6 +194,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#74]: https://github.com/Comandeer/eslint-config/issues/74
 [#76]: https://github.com/Comandeer/eslint-config/issues/76
 [#79]: https://github.com/Comandeer/eslint-config/issues/79
+[#80]: https://github.com/Comandeer/eslint-config/issues/80
 [#81]: https://github.com/Comandeer/eslint-config/issues/81
 [#82]: https://github.com/Comandeer/eslint-config/issues/82
 
