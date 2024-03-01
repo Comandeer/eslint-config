@@ -6,66 +6,68 @@ export default {
 	],
 
 	rules: {
-		'array-bracket-spacing': [ 'error', 'always' ],
+		'@stylistic/array-bracket-spacing': [ 'error', 'always' ],
 		'array-callback-return': 'error',
 		'arrow-body-style': [ 'error', 'always' ],
-		'arrow-parens': [ 'error', 'always' ],
-		'arrow-spacing': [ 'error', {
+		'@stylistic/arrow-parens': [ 'error', 'always' ],
+		'@stylistic/arrow-spacing': [ 'error', {
 			after: true,
 			before: true
 		} ],
-		'block-spacing': 'error',
-		'brace-style': [ 'error', '1tbs' ],
+		'@stylistic/block-spacing': 'error',
+		'@stylistic/brace-style': [ 'error', '1tbs' ],
 		camelcase: [ 'error', {
 			properties: 'always'
 		} ],
-		'comma-dangle': [ 'error', 'never' ],
-		'comma-spacing': [ 'error', {
+		'@stylistic/comma-dangle': [ 'error', 'never' ],
+		'@stylistic/comma-spacing': [ 'error', {
 			after: true,
 			before: false
 		} ],
-		'comma-style': [ 'error', 'last' ],
-		'computed-property-spacing': [ 'error', 'always' ],
+		'@stylistic/comma-style': [ 'error', 'last' ],
+		'@stylistic/computed-property-spacing': [ 'error', 'always' ],
 		curly: 'error',
-		'dot-location': [ 'error', 'object' ],
+		'@stylistic/dot-location': [ 'error', 'object' ],
 		'dot-notation': 'error',
-		'eol-last': 'error',
+		'@stylistic/eol-last': 'error',
 		'func-style': [ 'error', 'declaration', {
 			allowArrowFunctions: true
 		} ],
-		'generator-star-spacing': [ 'error', 'after' ],
-		'indent': [ 'error', 'tab' ],
-		'key-spacing': [ 'error', {
+		'@stylistic/generator-star-spacing': [ 'error', 'after' ],
+		'@stylistic/indent': [ 'error', 'tab' ],
+		'@stylistic/key-spacing': [ 'error', {
 			afterColon: true,
 			beforeColon: false,
 			mode: 'strict'
 		} ],
-		'keyword-spacing': 'error',
-		'linebreak-style': [ 'error', 'unix' ],
-		'new-parens': 'error',
-		'no-extra-semi': 'error',
+		'@stylistic/keyword-spacing': 'error',
+		'@stylistic/linebreak-style': [ 'error', 'unix' ],
+		'@stylistic/new-parens': 'error',
+		'@stylistic/no-extra-semi': 'error',
 		'no-irregular-whitespace': 'error',
-		'no-mixed-spaces-and-tabs': 'error',
-		'no-multiple-empty-lines': [ 'error', {
+		'@stylistic/no-mixed-spaces-and-tabs': 'error',
+		'@stylistic/no-multiple-empty-lines': [ 'error', {
 			max: 1
 		} ],
-		'no-trailing-spaces': 'error',
+		'@stylistic/no-trailing-spaces': 'error',
 		'object-curly-spacing': 'off',
+		'@stylistic/object-curly-spacing': 'off',
 		'@babel/object-curly-spacing': [ 'error', 'always' ],
 		'object-shorthand': [ 'error', 'always' ],
-		'quotes': [ 'error', 'single' ],
+		'@stylistic/quotes': [ 'error', 'single' ],
 		'semi': 'off',
+		'@stylistic/semi': 'off',
 		'@babel/semi': [ 'error', 'always' ],
-		'space-before-function-paren': [ 'error', {
+		'@stylistic/space-before-function-paren': [ 'error', {
 			anonymous: 'never',
 			named: 'never',
 			asyncArrow: 'always'
 		} ],
-		'space-in-parens': [ 'error', 'always' ],
-		'space-infix-ops': 'error',
-		'space-unary-ops': 'error',
-		'spaced-comment': [ 'error', 'always' ],
-		'wrap-iife': [ 'error', 'outside' ],
-		'yield-star-spacing': [ 'error', 'after' ]
+		'@stylistic/space-in-parens': [ 'error', 'always' ],
+		'@stylistic/space-infix-ops': 'error',
+		'@stylistic/space-unary-ops': 'error',
+		'@stylistic/spaced-comment': [ 'error', 'always' ],
+		'@stylistic/wrap-iife': [ 'error', 'outside' ],
+		'@stylistic/yield-star-spacing': [ 'error', 'after' ]
 	}
 };
