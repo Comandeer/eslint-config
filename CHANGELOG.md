@@ -6,6 +6,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.12.0]
+### Added
+* [#81]: basic support for monorepo.
+
+### Changed
+* [#82]: **BREAKING CHANGE**: updated dependencies:
+
+	| Dependency                               | Old version | New version |
+	| ---------------------------------------- | ----------- | ----------- |
+	| `@babel/core`                            | `^7.22.9`   | `^7.24.0`   |
+	| `@babel/eslint-parser`                   | `^7.22.9`   | `^7.23.10`  |
+	| `@babel/eslint-plugin`                   | `^7.22.5`   | `7.23.5`    |
+	| `@babel/plugin-syntax-import-attributes` | `^7.22.5`   | `^7.23.3`   |
+	| `@babel/preset-env`                      | `^7.22.9`   | `^7.24.0`   |
+	| ⚠️ `@typescript-eslint/eslint-plugin`     | `^6.1.0`    | `^7.1.0`    |
+	| ⚠️ `@typescript-eslint/parser`            | `^6.1.0`    | `^7.1.0`    |
+	| ⚠️ `globals`                              | `^13.20.0`  | `^14.0.0`   |
+
+	Dependencies with major version change are marked with the "⚠️" emoji.
+
+### Fixed
+* [#79]: the `no-undef` rule in TS code is incorrectly switched on.
+
 ## [0.11.1] – 2023-07-22
 ### Fixed
 * [#76]: incorrect publishing workflow resulting in an incorrect package being published.
@@ -166,7 +189,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#73]: https://github.com/Comandeer/eslint-config/issues/73
 [#74]: https://github.com/Comandeer/eslint-config/issues/74
 [#76]: https://github.com/Comandeer/eslint-config/issues/76
+[#79]: https://github.com/Comandeer/eslint-config/issues/79
+[#81]: https://github.com/Comandeer/eslint-config/issues/81
+[#82]: https://github.com/Comandeer/eslint-config/issues/82
 
+[0.12.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.11.1...v0.12.0
 [0.11.1]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.9.0...v0.10.0
