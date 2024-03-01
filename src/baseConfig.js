@@ -80,7 +80,7 @@ export default [
 			parser: typescriptParser,
 			parserOptions: {
 				sourceType: 'module',
-				project: './tsconfig.json'
+				project: [ './tsconfig.json', './packages/*/tsconfig.json' ]
 			}
 		}
 	}
