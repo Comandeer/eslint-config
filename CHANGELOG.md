@@ -6,9 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [0.12.0]
+## [0.13.0] – 2024-03-02
+### Added
+* [#85]: **BREAKING CHANGE**: configuration options.
+
+## [0.12.0] – 2024-03-01
 ### Added
 * [#81]: basic support for monorepo.
+
+### Removed
+* [#83]: **BREAKING CHANGE**: support for Node 16.
 
 ### Changed
 * [#80]: **BREAKING CHANGE**: move formatting rules to `@stylistic`.
@@ -197,18 +204,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#80]: https://github.com/Comandeer/eslint-config/issues/80
 [#81]: https://github.com/Comandeer/eslint-config/issues/81
 [#82]: https://github.com/Comandeer/eslint-config/issues/82
+[#83]: https://github.com/Comandeer/eslint-config/issues/83
+[#85]: https://github.com/Comandeer/eslint-config/issues/85
 
-[0.12.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.11.1...v0.12.0
-[0.11.1]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.11.0...v0.11.1
-[0.11.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.10.0...v0.11.0
-[0.10.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.9.0...v0.10.0
-[0.9.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.8.0...v0.9.0
-[0.8.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.7.0...v0.8.0
-[0.7.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.6.0...v0.7.0
-[0.6.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.5.0...v0.6.0
-[0.5.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.4.0...v0.5.0
-[0.4.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.3.0...v0.4.0
-[0.3.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.2...v0.3.0
-[0.2.2]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.1...v0.2.2
-[0.2.1]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.2.0...v0.2.1
-[0.2.0]: https://github.com/Comandeer/rollup-plugin-babel-minify/compare/v0.1.0...v0.2.0
+[0.13.0]: https://github.com/Comandeer/eslint-config/compare/v0.12.0...v0.13.0
+[0.12.0]: https://github.com/Comandeer/eslint-config/compare/v0.11.1...v0.12.0
+[0.11.1]: https://github.com/Comandeer/eslint-config/compare/v0.11.0...v0.11.1
+[0.11.0]: https://github.com/Comandeer/eslint-config/compare/v0.10.0...v0.11.0
+[0.10.0]: https://github.com/Comandeer/eslint-config/compare/v0.9.0...v0.10.0
+[0.9.0]: https://github.com/Comandeer/eslint-config/compare/v0.8.0...v0.9.0
+[0.8.0]: https://github.com/Comandeer/eslint-config/compare/v0.7.0...v0.8.0
+[0.7.0]: https://github.com/Comandeer/eslint-config/compare/v0.6.0...v0.7.0
+[0.6.0]: https://github.com/Comandeer/eslint-config/compare/v0.5.0...v0.6.0
+[0.5.0]: https://github.com/Comandeer/eslint-config/compare/v0.4.0...v0.5.0
+[0.4.0]: https://github.com/Comandeer/eslint-config/compare/v0.3.0...v0.4.0
+[0.3.0]: https://github.com/Comandeer/eslint-config/compare/v0.2.2...v0.3.0
+[0.2.2]: https://github.com/Comandeer/eslint-config/compare/v0.2.1...v0.2.2
+[0.2.1]: https://github.com/Comandeer/eslint-config/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/Comandeer/eslint-config/compare/v0.1.0...v0.2.0
