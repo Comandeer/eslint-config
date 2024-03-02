@@ -3,9 +3,13 @@ import jsConfig from './jsConfig.js';
 import testsConfig from './testsConfig.js';
 import tsConfig from './tsConfig.js';
 
-export default [
-	...baseConfig,
-	jsConfig,
-	tsConfig,
-	testsConfig
-];
+export default function( {
+	tsProject = [ './tsconfig.json' ]
+} = {} ) {
+	return [
+		...baseConfig( { tsProject } ),
+		jsConfig,
+		tsConfig,
+		testsConfig
+	];
+}
