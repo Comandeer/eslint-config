@@ -3,7 +3,7 @@ import * as globPatterns from './globPatterns.js';
 
 export default {
 	files: [
-		`tests/${ globPatterns.allFiles }`
+		`**/tests/${ globPatterns.allFiles }`
 	],
 
 	plugins: {

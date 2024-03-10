@@ -14,10 +14,10 @@ export default function( {
 	return [
 		{
 			ignores: [
-				'bin/**/*',
-				'build/**/*',
-				'dist/**/*',
-				'tests/__fixtures__/**/*'
+				'**/bin/**/*',
+				'**/build/**/*',
+				'**/dist/**/*',
+				'**/tests/__fixtures__/**/*'
 			]
 		},
 

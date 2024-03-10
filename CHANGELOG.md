@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.13.1] – 2024-03-10
+### Fixed
+* [#88]: incorrect glob patterns in monorepos.
+
 ## [0.13.0] – 2024-03-02
 ### Added
 * [#85]: **BREAKING CHANGE**: configuration options.
@@ -206,7 +210,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#82]: https://github.com/Comandeer/eslint-config/issues/82
 [#83]: https://github.com/Comandeer/eslint-config/issues/83
 [#85]: https://github.com/Comandeer/eslint-config/issues/85
+[#88]: https://github.com/Comandeer/eslint-config/issues/88
 
+[0.13.1]: https://github.com/Comandeer/eslint-config/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Comandeer/eslint-config/compare/v0.12.0...v0.13.0
 [0.12.0]: https://github.com/Comandeer/eslint-config/compare/v0.11.1...v0.12.0
 [0.11.1]: https://github.com/Comandeer/eslint-config/compare/v0.11.0...v0.11.1
