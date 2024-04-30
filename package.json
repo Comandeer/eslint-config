@@ -70,22 +70,22 @@
     "ava": "^6.1.2",
     "commitplease": "^3.2.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.1.1",
     "execa": "^8.0.1",
     "husky": "^9.0.11",
     "pathe": "^1.1.2",
     "tempy": "^3.1.0"
   },
   "dependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/eslint-parser": "^7.23.10",
-    "@babel/eslint-plugin": "^7.23.5",
-    "@babel/plugin-syntax-import-attributes": "^7.23.3",
-    "@babel/preset-env": "^7.24.0",
-    "@stylistic/eslint-plugin": "^1.6.3",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
+    "@babel/core": "^7.24.5",
+    "@babel/eslint-parser": "^7.24.5",
+    "@babel/eslint-plugin": "^7.24.5",
+    "@babel/plugin-syntax-import-attributes": "^7.24.1",
+    "@babel/preset-env": "^7.24.5",
+    "@stylistic/eslint-plugin": "^1.8.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
     "eslint-plugin-ava": "^14.0.0",
-    "globals": "^14.0.0"
+    "globals": "^15.1.0"
   }
 }
