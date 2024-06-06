@@ -6,6 +6,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.14.0] – 2024-04-30
+### Added
+* [#90]: support for ESLint 9.
+
+### Changed
+* [#90]: **BREAKING CHANGE**: updated dependencies:
+
+  | Dependency                               | Old version | New version |
+  | ---------------------------------------- | ----------- | ----------- |
+  | `@babel/core`                            | `^7.24.0`   | `^7.24.5`   |
+  | `@babel/eslint-parser`                   | `^7.23.10`  | `^7.24.5`   |
+  | `@babel/eslint-plugin`                   | `^7.23.5`   | `7.24.5`    |
+  | `@babel/plugin-syntax-import-attributes` | `^7.23.3`   | `^7.24.1`   |
+  | `@babel/preset-env`                      | `^7.24.0`   | `^7.24.5`   |
+  | `@stylistic/eslint-plugin`               | `^1.6.3`    | `^1.8.0`    |
+  | `@typescript-eslint/eslint-plugin`       | `^7.1.0`    | `^7.8.0`    |
+  | `@typescript-eslint/parser`              | `^7.1.0`    | `^7.8.0`    |
+  | ⚠️ `globals`                              | `^14.0.0`   | `^15.1.0`   |
+
+### Removed
+* [#90]: **BREAKING CHANGE**: support for ESLint 8.
+
+
 ## [0.13.1] – 2024-03-10
 ### Fixed
 * [#88]: incorrect glob patterns in monorepos.
@@ -211,7 +234,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#83]: https://github.com/Comandeer/eslint-config/issues/83
 [#85]: https://github.com/Comandeer/eslint-config/issues/85
 [#88]: https://github.com/Comandeer/eslint-config/issues/88
+[#90]: https://github.com/Comandeer/eslint-config/issues/90
 
+[0.14.0]: https://github.com/Comandeer/eslint-config/compare/v0.13.1...v0.14.0
 [0.13.1]: https://github.com/Comandeer/eslint-config/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Comandeer/eslint-config/compare/v0.12.0...v0.13.0
 [0.12.0]: https://github.com/Comandeer/eslint-config/compare/v0.11.1...v0.12.0
