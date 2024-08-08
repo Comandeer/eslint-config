@@ -30,8 +30,7 @@ export default {
 		'ava/no-unknown-modifiers': 'error',
 		'ava/prefer-async-await': 'error',
 		'ava/prefer-power-assert': 'off',
-		// FIXME(#90): temporarily switched off until https://github.com/avajs/eslint-plugin-ava/issues/356 is resolved
-		'ava/prefer-t-regex': 'off',
+		'ava/prefer-t-regex': 'error',
 		'ava/test-title': 'error',
 		'ava/test-title-format': 'off',
 		'ava/use-t': 'error',
