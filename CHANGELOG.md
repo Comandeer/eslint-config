@@ -6,9 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [0.14.0] – 2024-04-30
+## [0.14.0] – 2024-08-09
 ### Added
 * [#90]: support for ESLint 9.
+* [#92]: support for Node 22.
 
 ### Changed
 * [#90]: **BREAKING CHANGE**: updated dependencies:
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 
 * [#90]: **BREAKING CHANGE**: support for ESLint 8.
+* [#92]: **BREAKING CHANGE**: support for Node 18.
 
 
 ## [0.13.1] – 2024-03-10
@@ -238,6 +240,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#85]: https://github.com/Comandeer/eslint-config/issues/85
 [#88]: https://github.com/Comandeer/eslint-config/issues/88
 [#90]: https://github.com/Comandeer/eslint-config/issues/90
+[#92]: https://github.com/Comandeer/eslint-config/issues/92
 
 [0.14.0]: https://github.com/Comandeer/eslint-config/compare/v0.13.1...v0.14.0
 [0.13.1]: https://github.com/Comandeer/eslint-config/compare/v0.13.0...v0.13.1
