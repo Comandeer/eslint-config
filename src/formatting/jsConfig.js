@@ -55,9 +55,7 @@ export default {
 		'@babel/object-curly-spacing': [ 'error', 'always' ],
 		'object-shorthand': [ 'error', 'always' ],
 		'@stylistic/quotes': [ 'error', 'single' ],
-		'semi': 'off',
-		'@stylistic/semi': 'off',
-		'@babel/semi': [ 'error', 'always' ],
+		'@stylistic/semi': 'error',
 		'@stylistic/space-before-function-paren': [ 'error', {
 			anonymous: 'never',
 			named: 'never',

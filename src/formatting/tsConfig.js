@@ -6,11 +6,8 @@ export default {
 	],
 
 	rules: {
-		'@babel/semi': 'off',
-		'@typescript-eslint/semi': [ 'error', 'always' ],
-
-		'@typescript-eslint/member-delimiter-style': 'error',
-		'@typescript-eslint/type-annotation-spacing': [
+		'@stylistic/member-delimiter-style': 'error',
+		'@stylistic/type-annotation-spacing': [
 			'error',
 			{
 				before: false,

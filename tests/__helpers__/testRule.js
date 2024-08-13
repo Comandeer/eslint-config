@@ -16,8 +16,11 @@ export default test.macro( async ( t, {
 	fakePath = fixtureName,
 	tsConfig
 } = {} ) => {
-	const result = await lintFile( fixtureName, fakePath, tsConfig );
-	const matched = result.match( resultRegex );
+	const { stdout, stderr } = await lintFile( fixtureName, fakePath, tsConfig );
+
+	t.is( stderr, '', 'ESLint did not raise any errors' );
+
+	const matched = stdout.match( resultRegex );
 	const matchedCount = matched?.groups?.count ?? 0;
 
 	t.is( Number( matchedCount ), expectedErrorCount );
@@ -39,20 +42,20 @@ async function lintFile( fixtureName, fakePath, tsConfig ) {
 			await writeFile( tsConfigFilePath, JSON.stringify( tsConfig ), 'utf-8' );
 		}
 
-		const { stdout } = await execa( 'eslint', [
+		const { stdout, stderr } = await execa( 'eslint', [
+			'--no-ignore',
 			'--c',
 			defaultConfigFilePath,
 			fakePath
 		], {
 			cwd: tempDirPath,
 			preferLocal: true,
-			extendEnv: true,
-			env: {
-				ESLINT_USE_FLAT_CONFIG: true
-			},
 			reject: false
 		} );
 
-		return stdout;
+		return {
+			stdout,
+			stderr
+		};
 	} );
 }

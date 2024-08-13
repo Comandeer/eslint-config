@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.15.0] – 2024-08-14
+### Changed
+* [#97]: **BREAKING CHANGE**: the `@babel/semi` rule was replaced with the `@stylistic/semi` one.
+
+### Fixed
+* [#96]: **BREAKING CHANGE**: the removed `@typescript-eslint/ban-types` rule was replaced with more granular ones:
+	* [`@typescript-eslint/no-unsafe-function-type`](https://typescript-eslint.io/rules/no-unsafe-function-type),
+	* [`@typescript-eslint/no-wrapper-object-types`](https://typescript-eslint.io/rules/no-wrapper-object-types/)
+* [#97]: **BREKING CHANGE** the removed `@typescript-eslint/semi`, `@typescript-eslint/member-delimiter-style` and `@typescript-eslint/type-annotation-spacing` formatting rules were replaced with their `@stylistic` counter-parts.
+
 ## [0.14.0] – 2024-08-09
 ### Added
 * [#90]: support for ESLint 9.
@@ -241,7 +251,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#88]: https://github.com/Comandeer/eslint-config/issues/88
 [#90]: https://github.com/Comandeer/eslint-config/issues/90
 [#92]: https://github.com/Comandeer/eslint-config/issues/92
+[#96]: https://github.com/Comandeer/eslint-config/issues/96
+[#97]: https://github.com/Comandeer/eslint-config/issues/97
 
+[0.15.0]: https://github.com/Comandeer/eslint-config/compare/v0.14.0...v0.15.0
 [0.14.0]: https://github.com/Comandeer/eslint-config/compare/v0.13.1...v0.14.0
 [0.13.1]: https://github.com/Comandeer/eslint-config/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Comandeer/eslint-config/compare/v0.12.0...v0.13.0

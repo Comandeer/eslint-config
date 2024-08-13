@@ -29,40 +29,6 @@ export default {
 			}
 		],
 		'@typescript-eslint/await-thenable': 'error',
-		'@typescript-eslint/ban-types': [
-			'error',
-			{
-				types: {
-					Boolean: {
-						message: 'Use \'boolean\' instead.',
-						fixWith: 'boolean'
-					},
-					Number: {
-						message: 'Use \'number\' instead.',
-						fixWith: 'number'
-					},
-					BigInt: {
-						message: 'Use \'bigint\' instead.',
-						fixWith: 'bigint'
-					},
-					String: {
-						message: 'Use \'string\' instead.',
-						fixWith: 'string'
-					},
-					Symbol: {
-						message: 'Use \'symbol\' instead.',
-						fixWith: 'symbol'
-					},
-					Function: {
-						message: 'Use more detailed type'
-					},
-					Object: {
-						message: 'Use more detailed type'
-					}
-				},
-				extendDefaults: false
-			}
-		],
 		'@typescript-eslint/class-literal-property-style': [ 'error', 'fields' ],
 		'@typescript-eslint/consistent-generic-constructors': [ 'error', 'constructor' ],
 		'@typescript-eslint/consistent-indexed-object-style': [ 'error', 'record' ],
@@ -179,10 +145,12 @@ export default {
 		'@typescript-eslint/no-unsafe-call': 'off',
 		'@typescript-eslint/no-unsafe-declaration-merging': 'error',
 		'@typescript-eslint/no-unsafe-enum-comparison': 'off',
+		'@typescript-eslint/no-unsafe-function-type': 'error',
 		'@typescript-eslint/no-unsafe-member-access': 'off',
 		'@typescript-eslint/no-unsafe-return': 'off',
 		'@typescript-eslint/no-useless-empty-export': 'error',
 		'@typescript-eslint/no-var-requires': 'error',
+		'@typescript-eslint/no-wrapper-object-types': 'error',
 		'@typescript-eslint/non-nullable-type-assertion-style': 'error',
 		'@typescript-eslint/parameter-properties': 'off',
 		'@typescript-eslint/prefer-as-const': 'error',

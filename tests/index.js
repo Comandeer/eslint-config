@@ -109,3 +109,10 @@ test.serial( 'no-undef rule is not used for TS code', testRule, {
 	expectedErrorCount: 0,
 	tsConfig: defaultTSConfig
 } );
+
+// #96
+test.serial( 'wrapper types are not allowed in TS code', testRule, {
+	fixtureName: 'wrapperTypes.ts',
+	expectedErrorCount: 7,
+	tsConfig: defaultTSConfig
+} );
