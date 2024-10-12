@@ -1,6 +1,6 @@
 import * as globPatterns from './globPatterns.js';
 
-export default {
+export const jsConfig = {
 	files: [
 		globPatterns.allFiles
 	],
@@ -58,6 +58,12 @@ export default {
 		'no-prototype-builtins': 'error',
 		'no-redeclare': 'error',
 		'no-regex-spaces': 'error',
+		'no-restricted-syntax': [
+			'error', {
+				'selector': 'ExportDefaultDeclaration',
+				'message': 'Use a named export instead of the default one.'
+			}
+		],
 		'no-return-await': 'error',
 		'no-self-assign': 'error',
 		'no-shadow-restricted-names': 'error',

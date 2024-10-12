@@ -1,7 +1,7 @@
 import ava from 'eslint-plugin-ava';
 import * as globPatterns from './globPatterns.js';
 
-export default {
+export const testConfig = {
 	files: [
 		`**/tests/${ globPatterns.allFiles }`
 	],

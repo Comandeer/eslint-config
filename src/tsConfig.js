@@ -1,6 +1,6 @@
 import * as globPatterns from './globPatterns.js';
 
-export default {
+export const tsConfig = {
 	files: [
 		globPatterns.tsFiles
 	],
@@ -44,7 +44,7 @@ export default {
 		'@typescript-eslint/consistent-type-imports': [
 			'error',
 			{
-				prefer: 'no-type-imports'
+				prefer: 'type-imports'
 			}
 		],
 		'@typescript-eslint/explicit-function-return-type': 'error',

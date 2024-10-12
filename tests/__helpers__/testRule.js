@@ -10,7 +10,7 @@ const defaultConfigFilePath = resolvePath( __dirname, '..', '..', 'eslint.config
 const fixtureDirPath = resolvePath( __dirname, '..', '__fixtures__' );
 const resultRegex = / (?<count>\d+) problem/u;
 
-export default test.macro( async ( t, {
+export const testRule = test.macro( async ( t, {
 	fixtureName,
 	expectedErrorCount = 0,
 	fakePath = fixtureName,

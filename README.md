@@ -15,7 +15,7 @@ npm install @comandeer/eslint-config --save-dev
 Put it inside your `eslint.config.js` file:
 
 ```javascript
-import eslintConfig from '@comandeer/eslint-config';
+import { eslintConfig } from '@comandeer/eslint-config';
 
 export default eslintConfig();
 ```
@@ -23,8 +23,8 @@ export default eslintConfig();
 Optionally, you could also include formatting rules:
 
 ```javascript
-import eslintConfig from '@comandeer/eslint-config';
-import formattingConfig from '@comandeer/eslint-config/formatting';
+import { eslintConfig } from '@comandeer/eslint-config';
+import { formattingConfig } from '@comandeer/eslint-config/formatting';
 
 export default [
 	...eslintConfig(),

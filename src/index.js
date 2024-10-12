@@ -1,15 +1,15 @@
-import baseConfig from './baseConfig.js';
-import jsConfig from './jsConfig.js';
-import testsConfig from './testsConfig.js';
-import tsConfig from './tsConfig.js';
+import { baseConfig } from './baseConfig.js';
+import { jsConfig } from './jsConfig.js';
+import { testConfig } from './testConfig.js';
+import { tsConfig } from './tsConfig.js';
 
-export default function( {
+export function eslintConfig( {
 	tsProject = [ './tsconfig.json' ]
 } = {} ) {
 	return [
 		...baseConfig( { tsProject } ),
 		jsConfig,
 		tsConfig,
-		testsConfig
+		testConfig
 	];
 }

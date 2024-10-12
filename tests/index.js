@@ -1,5 +1,5 @@
 import test from 'ava';
-import testRule from './__helpers__/testRule.js';
+import { testRule } from './__helpers__/testRule.js';
 
 const defaultTSConfig = {
 	compilerOptions: {
@@ -115,4 +115,17 @@ test.serial( 'wrapper types are not allowed in TS code', testRule, {
 	fixtureName: 'wrapperTypes.ts',
 	expectedErrorCount: 7,
 	tsConfig: defaultTSConfig
+} );
+
+// #99
+test.serial( 'importing types requires \'import type\'', testRule, {
+	fixtureName: 'typeImports.ts',
+	expectedErrorCount: 2,
+	tsConfig: defaultTSConfig
+} );
+
+// #100
+test.serial( 'disallow default exports', testRule, {
+	fixtureName: 'exportDefault.js',
+	expectedErrorCount: 1
 } );
