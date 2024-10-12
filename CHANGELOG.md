@@ -6,6 +6,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.16.0] – 2024-10-13
+### Changed
+* [#99]: **BREAKING CHANGE**: importing types now requires the `import type` syntax.
+* [#100]: **BREAKING CHANGE** default exports are no longer allowed.
+* [#101]: updated dependencies:
+
+  | Dependency                               | Old version | New version |
+  | ---------------------------------------- | ----------- | ----------- |
+  | `@babel/core`                            | `^7.25.2`   | `^7.25.8`   |
+  | `@babel/eslint-parser`                   | `^7.25.1`   | `^7.25.8`   |
+  | `@babel/eslint-plugin`                   | `^7.25.1`   | `^7.25.7`   |
+  | `@babel/plugin-syntax-import-attributes` | `^7.24.7`   | `^7.25.7`   |
+  | `@babel/preset-env`                      | `^7.25.3`   | `^7.25.8`   |
+  | `@stylistic/eslint-plugin`               | `^2.6.2`    | `^2.9.0`    |
+  | `@typescript-eslint/eslint-plugin`       | `^8.0.1`    | `^8.8.1`    |
+  | `@typescript-eslint/eslint-parser`       | `^8.0.1`    | `^8.8.1`    |
+  | `globals`                                | `^15.9.0`   | `^15.11.0`  |
+
+
 ## [0.15.0] – 2024-08-14
 ### Changed
 * [#97]: **BREAKING CHANGE**: the `@babel/semi` rule was replaced with the `@stylistic/semi` one.
@@ -253,7 +272,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#92]: https://github.com/Comandeer/eslint-config/issues/92
 [#96]: https://github.com/Comandeer/eslint-config/issues/96
 [#97]: https://github.com/Comandeer/eslint-config/issues/97
+[#99]: https://github.com/Comandeer/eslint-config/issues/99
+[#100]: https://github.com/Comandeer/eslint-config/issues/100
+[#101]: https://github.com/Comandeer/eslint-config/issues/101
 
+[0.16.0]: https://github.com/Comandeer/eslint-config/compare/v0.15.0...v0.16.0
 [0.15.0]: https://github.com/Comandeer/eslint-config/compare/v0.14.0...v0.15.0
 [0.14.0]: https://github.com/Comandeer/eslint-config/compare/v0.13.1...v0.14.0
 [0.13.1]: https://github.com/Comandeer/eslint-config/compare/v0.13.0...v0.13.1
