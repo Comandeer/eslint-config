@@ -116,3 +116,10 @@ test.serial( 'wrapper types are not allowed in TS code', testRule, {
 	expectedErrorCount: 7,
 	tsConfig: defaultTSConfig
 } );
+
+// #99
+test.serial( 'importing types requires \'import type\'', testRule, {
+	fixtureName: 'typeImports.ts',
+	expectedErrorCount: 2,
+	tsConfig: defaultTSConfig
+} );
