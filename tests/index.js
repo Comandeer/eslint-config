@@ -123,3 +123,9 @@ test.serial( 'importing types requires \'import type\'', testRule, {
 	expectedErrorCount: 2,
 	tsConfig: defaultTSConfig
 } );
+
+// #100
+test.serial( 'disallow default exports', testRule, {
+	fixtureName: 'exportDefault.js',
+	expectedErrorCount: 1
+} );
