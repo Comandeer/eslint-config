@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.16.0] – 2024-10-13
 ### Changed
+* **BREAKING CHANGE**: the package removed default exports in favor of named ones:
+	* `@comandeer/eslint-config` now exports `eslintConfig` named export,
+	* `@comandeer/eslint-config/formatting` now exports `formattingConfig` named export.
 * [#99]: **BREAKING CHANGE**: importing types now requires the `import type` syntax.
 * [#100]: **BREAKING CHANGE** default exports are no longer allowed.
 * [#101]: updated dependencies:

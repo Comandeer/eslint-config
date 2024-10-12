@@ -1,6 +1,6 @@
 import * as globPatterns from './globPatterns.js';
 
-export default {
+export const jsConfig = {
 	files: [
 		globPatterns.allFiles
 	],

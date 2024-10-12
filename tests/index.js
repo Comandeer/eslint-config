@@ -1,5 +1,5 @@
 import test from 'ava';
-import testRule from './__helpers__/testRule.js';
+import { testRule } from './__helpers__/testRule.js';
 
 const defaultTSConfig = {
 	compilerOptions: {

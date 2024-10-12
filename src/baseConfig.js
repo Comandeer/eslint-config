@@ -8,7 +8,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import globals from 'globals';
 import * as globPatterns from './globPatterns.js';
 
-export default function( {
+export function baseConfig( {
 	tsProject = [ './tsconfig.json' ]
 } = {} )  {
 	return [
