@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ---
 
 ## [0.17.0]
+### Added
+* [#103]: the `allowDefaultExports` option to specify files that are allowed to contain default exports.
+
+### Changed
+* [#103]: **BREAKING CHANGE**: config files (`*.config.{js,mjs,ts,mts}`) are always allowed to contain default exports.
+
 ### Removed
 * [#104]: **BREAKING CHANGE**: the `@babel/no-invalid-this` rule has been removed.
 
@@ -282,6 +288,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#99]: https://github.com/Comandeer/eslint-config/issues/99
 [#100]: https://github.com/Comandeer/eslint-config/issues/100
 [#101]: https://github.com/Comandeer/eslint-config/issues/101
+[#103]: https://github.com/Comandeer/eslint-config/issues/103
 [#104]: https://github.com/Comandeer/eslint-config/issues/104
 
 [0.17.0]: https://github.com/Comandeer/eslint-config/compare/v0.16.0...v0.17.0
