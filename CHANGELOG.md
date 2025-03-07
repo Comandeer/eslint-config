@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.17.0]
+### Removed
+* [#104]: **BREAKING CHANGE**: the `@babel/no-invalid-this` rule has been removed.
+
 ## [0.16.0] – 2024-10-13
 ### Changed
 * **BREAKING CHANGE**: the package removed default exports in favor of named ones:
@@ -278,7 +282,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#99]: https://github.com/Comandeer/eslint-config/issues/99
 [#100]: https://github.com/Comandeer/eslint-config/issues/100
 [#101]: https://github.com/Comandeer/eslint-config/issues/101
+[#104]: https://github.com/Comandeer/eslint-config/issues/104
 
+[0.17.0]: https://github.com/Comandeer/eslint-config/compare/v0.16.0...v0.17.0
 [0.16.0]: https://github.com/Comandeer/eslint-config/compare/v0.15.0...v0.16.0
 [0.15.0]: https://github.com/Comandeer/eslint-config/compare/v0.14.0...v0.15.0
 [0.14.0]: https://github.com/Comandeer/eslint-config/compare/v0.13.1...v0.14.0
