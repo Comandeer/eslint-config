@@ -4,11 +4,16 @@ import { testConfig } from './testConfig.js';
 import { tsConfig } from './tsConfig.js';
 
 export function eslintConfig( {
-	tsProject = [ './tsconfig.json' ]
+	tsProject = [ './tsconfig.json' ],
+	allowDefaultExports = []
 } = {} ) {
 	return [
-		...baseConfig( { tsProject } ),
-		jsConfig,
+		...baseConfig( {
+			tsProject
+		} ),
+		...jsConfig( {
+			allowDefaultExports
+		} ),
 		tsConfig,
 		testConfig
 	];

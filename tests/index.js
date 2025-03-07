@@ -1,11 +1,15 @@
+import { fileURLToPath } from 'node:url';
 import test from 'ava';
+import { dirname, resolve } from 'pathe';
 import { testRule } from './__helpers__/testRule.js';
 
+const __dirname = dirname( fileURLToPath( import.meta.url ) );
 const defaultTSConfig = {
 	compilerOptions: {
 		strict: true
 	}
 };
+const allowDefaultExportsConfigFilePath = resolve( __dirname, '__fixtures__', 'config', 'allowDefaultExports.js' );
 
 test.serial( 'it fails on incorrect code', testRule, {
 	fixtureName: 'invalid.js',
@@ -128,4 +132,42 @@ test.serial( 'importing types requires \'import type\'', testRule, {
 test.serial( 'disallow default exports', testRule, {
 	fixtureName: 'exportDefault.js',
 	expectedErrorCount: 1
+} );
+
+// #103
+[
+	'js',
+	'mjs',
+	'ts',
+	'mts'
+].forEach( ( fileExtension ) => {
+	test.serial( `allow default exports in config files by default (.${ fileExtension })`, testRule, {
+		fixtureName: 'exportDefault.js',
+		fakePath: `hublabubla.config.${ fileExtension }`,
+		tsConfig: defaultTSConfig,
+		expectedErrorCount: 0
+	} );
+
+	test.serial( `allow default exports in config files by default (.${ fileExtension }, nested)`, testRule, {
+		fixtureName: 'exportDefault.js',
+		fakePath: `src/hublabubla.config.${ fileExtension }`,
+		tsConfig: defaultTSConfig,
+		expectedErrorCount: 0
+	} );
+} );
+
+// #103
+test.serial( 'allow default exports in specified files', testRule, {
+	fixtureName: 'exportDefault.js',
+	fakePath: 'src/index.js',
+	expectedErrorCount: 0,
+	configFile: allowDefaultExportsConfigFilePath
+} );
+
+// #103
+test.serial( 'allow default exports in config files even if the option is overridden', testRule, {
+	fixtureName: 'exportDefault.js',
+	fakePath: 'hublabubla.config.js',
+	expectedErrorCount: 0,
+	configFile: allowDefaultExportsConfigFilePath
 } );

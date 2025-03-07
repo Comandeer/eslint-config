@@ -14,9 +14,15 @@ export const testRule = test.macro( async ( t, {
 	fixtureName,
 	expectedErrorCount = 0,
 	fakePath = fixtureName,
-	tsConfig
+	tsConfig,
+	configFile
 } = {} ) => {
-	const { stdout, stderr } = await lintFile( fixtureName, fakePath, tsConfig );
+	const { stdout, stderr } = await lintFile( {
+		fixtureName,
+		fakePath,
+		tsConfig,
+		configFile
+	} );
 
 	t.is( stderr, '', 'ESLint did not raise any errors' );
 
@@ -26,7 +32,12 @@ export const testRule = test.macro( async ( t, {
 	t.is( Number( matchedCount ), expectedErrorCount );
 } );
 
-async function lintFile( fixtureName, fakePath, tsConfig ) {
+async function lintFile( {
+	fixtureName,
+	fakePath,
+	tsConfig,
+	configFile
+} ) {
 	const fixtureFilePath = resolvePath( fixtureDirPath, fixtureName );
 
 	return temporaryDirectoryTask( async ( tempDirPath ) => {
@@ -45,7 +56,7 @@ async function lintFile( fixtureName, fakePath, tsConfig ) {
 		const { stdout, stderr } = await execa( 'eslint', [
 			'--no-ignore',
 			'--c',
-			defaultConfigFilePath,
+			configFile ?? defaultConfigFilePath,
 			fakePath
 		], {
 			cwd: tempDirPath,
