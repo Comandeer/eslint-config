@@ -6,7 +6,6 @@ export const jsConfig = {
 	],
 
 	rules: {
-		'@babel/no-invalid-this': 'error',
 		'constructor-super': 'error',
 		'default-case': 'off',
 		'eqeqeq': [ 'error', 'smart' ],
