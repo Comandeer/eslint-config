@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [0.17.0]
+## [0.17.0] – 2025-03-08
 ### Added
 * [#103]: the `allowDefaultExports` option to specify files that are allowed to contain default exports.
 * [#105]: support for TypeScript 5.8.
