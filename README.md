@@ -44,9 +44,10 @@ eslintConfig( {
 
 #### Available options
 
-| Name        | Value type      | Default value           | Description                                                  |
-| ----------- | --------------- | ----------------------- | ------------------------------------------------------------ |
-| `tsProject` | `Array<string>` | `[ './tsconfig.json' ]` | Paths to all TS config files in the project that should be used for linting. |
+| Name                  | Value type      | Default value           | Description                                                  |
+| --------------------- | --------------- | ----------------------- | ------------------------------------------------------------ |
+| `tsProject`           | `Array<string>` | `[ './tsconfig.json' ]` | Paths to all TS config files in the project that should be used for linting. |
+| `allowDefaultExports` | `Array<string>` | `[]`                    | Glob patterns for files that are allowed to contain default exports. **Default exports are always allowed in config files (`**/*.config.{js,mjs,ts,mts}`)** |
 
 ## License
 
