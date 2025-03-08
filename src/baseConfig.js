@@ -30,7 +30,7 @@ export function baseConfig( {
 
 				parserOptions: {
 					sourceType: 'module',
-					ecmaVersion: 2023,
+					ecmaVersion: 'latest',
 					ecmaFeatures: {
 						impliedStrict: true
 					}
