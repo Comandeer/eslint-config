@@ -28,9 +28,9 @@ export function baseConfig( {
 					globalThis: 'readonly'
 				},
 
+				sourceType: 'module',
+				ecmaVersion: 'latest',
 				parserOptions: {
-					sourceType: 'module',
-					ecmaVersion: 2023,
 					ecmaFeatures: {
 						impliedStrict: true
 					}
