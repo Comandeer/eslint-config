@@ -13,7 +13,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 * [#103]: **BREAKING CHANGE**: config files (`*.config.{js,mjs,ts,mts}`) are always allowed to contain default exports.
-
 * [#105]: **BREAKING CHANGE**: updated dependencies:
 
   | Dependency                               | Old version | New version |
@@ -29,6 +28,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   | ⚠️ `globals`                             | `^15.11.0`  | `^16.0.0`   |
 
   Dependencies with major version change are marked with the "⚠️" emoji.
+* [#108]: the supported ES version is now set to `'latest'`.
 
 ### Removed
 * [#104]: **BREAKING CHANGE**: the `@babel/no-invalid-this` rule has been removed.
@@ -308,6 +308,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#103]: https://github.com/Comandeer/eslint-config/issues/103
 [#104]: https://github.com/Comandeer/eslint-config/issues/104
 [#105]: https://github.com/Comandeer/eslint-config/issues/105
+[#108]: https://github.com/Comandeer/eslint-config/issues/108
 
 [0.17.0]: https://github.com/Comandeer/eslint-config/compare/v0.16.0...v0.17.0
 [0.16.0]: https://github.com/Comandeer/eslint-config/compare/v0.15.0...v0.16.0
