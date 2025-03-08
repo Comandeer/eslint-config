@@ -9,9 +9,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.17.0]
 ### Added
 * [#103]: the `allowDefaultExports` option to specify files that are allowed to contain default exports.
+* [#105]: support for TypeScript 5.8.
 
 ### Changed
 * [#103]: **BREAKING CHANGE**: config files (`*.config.{js,mjs,ts,mts}`) are always allowed to contain default exports.
+
+* [#105]: **BREAKING CHANGE**: updated dependencies:
+
+  | Dependency                               | Old version | New version |
+  | ---------------------------------------- | ----------- | ----------- |
+  | `@babel/core`                            | `^7.25.8`   | `^7.26.9`   |
+  | `@babel/eslint-parser`                   | `^7.25.8`   | `^7.26.8`   |
+  | `@babel/eslint-plugin`                   | `^7.25.7`   | `^7.25.9`   |
+  | `@babel/plugin-syntax-import-attributes` | `^7.25.7`   | `^7.26.0`   |
+  | `@babel/preset-env`                      | `^7.25.8`   | `^7.26.9`   |
+  | ⚠️ `@stylistic/eslint-plugin`            | `^2.9.0`    | `^4.2.0`    |
+  | `@typescript-eslint/eslint-plugin`       | `^8.8.1`    | `^8.26.0`   |
+  | `@typescript-eslint/eslint-parser`       | `^8.8.1`    | `^8.26.0`   |
+  | ⚠️ `globals`                             | `^15.11.0`  | `^16.0.0`   |
+
+  Dependencies with major version change are marked with the "⚠️" emoji.
 
 ### Removed
 * [#104]: **BREAKING CHANGE**: the `@babel/no-invalid-this` rule has been removed.
@@ -290,6 +307,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#101]: https://github.com/Comandeer/eslint-config/issues/101
 [#103]: https://github.com/Comandeer/eslint-config/issues/103
 [#104]: https://github.com/Comandeer/eslint-config/issues/104
+[#105]: https://github.com/Comandeer/eslint-config/issues/105
 
 [0.17.0]: https://github.com/Comandeer/eslint-config/compare/v0.16.0...v0.17.0
 [0.16.0]: https://github.com/Comandeer/eslint-config/compare/v0.15.0...v0.16.0
