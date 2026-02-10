@@ -1,7 +1,3 @@
-import babelParser from '@babel/eslint-parser';
-import babelPlugin from '@babel/eslint-plugin';
-import envPreset from '@babel/preset-env';
-import importAttributesSyntaxPlugin from '@babel/plugin-syntax-import-attributes';
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -44,31 +40,7 @@ export function baseConfig( {
 			],
 
 			plugins: {
-				'@babel': babelPlugin,
 				'@stylistic': stylisticPlugin
-			},
-
-			languageOptions: {
-				parser: babelParser,
-				parserOptions: {
-					requireConfigFile: false,
-					sourceType: 'module',
-					babelOptions: {
-						babelrc: false,
-						configFile: false,
-						presets: [
-							envPreset
-						],
-						plugins: [
-							[
-								importAttributesSyntaxPlugin,
-								{
-									deprecatedAssertSyntax: true
-								}
-							]
-						]
-					}
-				}
 			}
 		},
 

@@ -77,11 +77,6 @@
     "tempy": "^3.1.0"
   },
   "dependencies": {
-    "@babel/core": "^7.26.9",
-    "@babel/eslint-parser": "^7.26.8",
-    "@babel/eslint-plugin": "^7.25.9",
-    "@babel/plugin-syntax-import-attributes": "^7.26.0",
-    "@babel/preset-env": "^7.26.9",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@typescript-eslint/eslint-plugin": "^8.26.0",
     "@typescript-eslint/parser": "^8.26.0",

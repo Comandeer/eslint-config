@@ -17,8 +17,7 @@ export function jsConfig( {
 				'getter-return': [ 'error', {
 					allowImplicit: true
 				} ],
-				'new-cap': 'off',
-				'@babel/new-cap': 'error',
+				'new-cap': 'error',
 				'no-array-constructor': 'error',
 				'no-async-promise-executor': 'error',
 				'no-await-in-loop': 'error',
