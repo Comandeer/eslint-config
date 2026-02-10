@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [0.18.0] – 2026-02-10
+### Added
+
+* [#112]: support for Node 24.
+
+### Removed
+* [#112]: **BREAKING CHANGE**: support for Node < 224.
+
 ## [0.17.0] – 2025-03-08
 ### Added
 * [#103]: the `allowDefaultExports` option to specify files that are allowed to contain default exports.
@@ -309,7 +317,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#104]: https://github.com/Comandeer/eslint-config/issues/104
 [#105]: https://github.com/Comandeer/eslint-config/issues/105
 [#108]: https://github.com/Comandeer/eslint-config/issues/108
+[#112]: https://github.com/Comandeer/eslint-config/issues/112
 
+[0.18.0]: https://github.com/Comandeer/eslint-config/compare/v0.17.0...v0.18.0
 [0.17.0]: https://github.com/Comandeer/eslint-config/compare/v0.16.0...v0.17.0
 [0.16.0]: https://github.com/Comandeer/eslint-config/compare/v0.15.0...v0.16.0
 [0.15.0]: https://github.com/Comandeer/eslint-config/compare/v0.14.0...v0.15.0
