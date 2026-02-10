@@ -7,5 +7,5 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: comandeer/lint-pr-title@v1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: comandeer/lint-pr-title@b0e51efbc96d247135648234a01faf00d1031db9
