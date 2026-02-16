@@ -96,12 +96,6 @@ test.serial( 'lints TS file', testRule, {
 } );
 
 // #74
-test.serial( 'parses import assertions syntax', testRule, {
-	fixtureName: 'importAssertionsSyntax.js',
-	expectedErrorCount: 0
-} );
-
-// #74
 test.serial( 'parses import attributes syntax', testRule, {
 	fixtureName: 'importAttributesSyntax.js',
 	expectedErrorCount: 0

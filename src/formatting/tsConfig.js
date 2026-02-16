@@ -6,18 +6,19 @@ export const tsConfig = {
 	],
 
 	rules: {
+		'@stylistic/arrow-spacing': [
+			'error',
+			{
+				before: true,
+				after: true
+			}
+		],
 		'@stylistic/member-delimiter-style': 'error',
 		'@stylistic/type-annotation-spacing': [
 			'error',
 			{
 				before: false,
-				after: true,
-				overrides: {
-					arrow: {
-						before: true,
-						after: true
-					}
-				}
+				after: true
 			}
 		]
 	}
