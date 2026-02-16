@@ -341,6 +341,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [#108]: https://github.com/Comandeer/eslint-config/issues/108
 [#112]: https://github.com/Comandeer/eslint-config/issues/112
 [#113]: https://github.com/Comandeer/eslint-config/issues/113
+[#114]: https://github.com/Comandeer/eslint-config/issues/114
 
 [0.18.0]: https://github.com/Comandeer/eslint-config/compare/v0.17.0...v0.18.0
 [0.17.0]: https://github.com/Comandeer/eslint-config/compare/v0.16.0...v0.17.0
