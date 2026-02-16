@@ -66,21 +66,21 @@
     "eslint": ">=10.0.0"
   },
   "devDependencies": {
-    "@comandeer/rollup-lib-bundler": "^0.27.0",
-    "ava": "^6.4.1",
-    "commitplease": "^3.2.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^10.0.0",
-    "execa": "^9.6.1",
-    "husky": "^9.1.7",
-    "pathe": "^2.0.3",
-    "tempy": "^3.2.0"
+    "@comandeer/rollup-lib-bundler": "0.27.0",
+    "ava": "6.4.1",
+    "commitplease": "3.2.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "10.0.0",
+    "execa": "9.6.1",
+    "husky": "9.1.7",
+    "pathe": "2.0.3",
+    "tempy": "3.2.0"
   },
   "dependencies": {
-    "@stylistic/eslint-plugin": "^5.8.0",
-    "@typescript-eslint/eslint-plugin": "^8.56.0",
-    "@typescript-eslint/parser": "^8.56.0",
-    "eslint-plugin-ava": "^16.0.0",
-    "globals": "^17.3.0"
+    "@stylistic/eslint-plugin": "5.8.0",
+    "@typescript-eslint/eslint-plugin": "8.56.0",
+    "@typescript-eslint/parser": "8.56.0",
+    "eslint-plugin-ava": "16.0.0",
+    "globals": "17.3.0"
   }
 }
