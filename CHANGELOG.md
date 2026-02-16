@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [0.18.0]
+## [0.18.0] – 2026-02-17
 ### Added
 * [#112]: support for Node 24.
 * [#113]: support for ESLint 10.
@@ -15,18 +15,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 * [#113]: **BREAKING CHANGE**: changed the JS parser back to default ESLint parser, dropping the Babel one.
 * [#114] **BREAKING CHANGE**: updated dependencies:
 
-  | Dependency                                 | Old version | New version |
-  | ------------------------------------------ | ----------- | ----------- |
+  | Dependency                                  | Old version | New version |
+  | ------------------------------------------- | ----------- | ----------- |
   | ☠️ `@babel/core`                            | `^7.26.9`   | N/A         |
   | ☠️ `@babel/eslint-parser`                   | `^7.26.8`   | N/A         |
   | ☠️ `@babel/eslint-plugin`                   | `^7.26.9`   | N/A         |
   | ☠️ `@babel/plugin-syntax-import-attributes` | `^7.26.0`   | N/A         |
   | ☠️ `@babel/preset-env`                      | `^7.26.9`   | N/A         |
-
-  New dependencies are marked with the "⭐" emoji.
+  | ⚠️ `@stylistic/eslint-plugin`               | `^4.2.0`    | `5.8.0`     |
+  | `@typescript-eslint/eslint-plugin`          | `^8.26.0`   | `8.56.0`    |
+  | `@typescript-eslint/parser`                 | `^8.26.0`   | `8.56.0`    |
+  | ⚠️ `eslint-plugin-ava`                      | `^15.0.1`   | `16.0.0`    |
+  | ⚠️ `globals`                                | `^16.0.0`   | `17.3.0`    |
 
   Dependencies with major version change are marked with the "⚠️" emoji.
-
   Removed dependencies are marked with the "☠️" emoji.
 
 ### Removed
